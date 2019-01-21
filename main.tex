@@ -201,6 +201,11 @@ One goal of ground truth analysis is to find optimal analysis parameters for exp
 
 \textbf{MISSING LOGIC: how bad is performance on ground truth with a range of sub-optimal parameters?}\\
 
+\begin{figure}[h!]
+{\includegraphics[width=\textwidth]{full_figs/why_deconvolve_F1_4_colours.png}}
+{\caption{Best spike inference parameters varies across cells. X-axis: parameter value, Y-axis: cell ID (arbitrary but consistent order). Parameters for Suite2P (Threshold), MLSpike (A, tau, sigma) and LZero (lambda, scale) vary significantly across cells and sampling rates (rows), regardless of analysis metric (dot colour, ER: green, PCC: blue).
+\label{fig:GT_data_params}}}
+\end{figure}
 
 Together, these results show that modern spike-deconvolution methods can accurately recover neural activity, but the choice of metric for evaluation and fitting is of critical importance. Pearson correlation coefficient is a poor choice of metric as it returns inconsistent results with small changes in algorithm parameters, and leads to poor estimates of simple measures such as firing rate when used across methods and sampling rates. A spike-train-based method such as Error Rate\citep{Deneux2016-gu, Victor1996-cg}, or other recently developed methods based on information theory \citep{Theis2016-ee} or fuzzy set theory \citep{Reynolds2017-dr}. However, while good estimates of neural activity can be achieved with modern spike inference methods, the best parameters vary substantially between cells. This suggests spike inference may not be successful when ground truth data is not available, and parameters cannot be optimised for each cell.
 %Reynolds - a continuous approach based on fuzzy set theory. Theis - information gain.
