@@ -1,0 +1,16 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Results}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Spike inference methods work well on ground truth data if parameters are fitted using Error Rate instead of Pearson Correlation Coefficient}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Spike inference and deconvolution methods disagree on estimates of simple neural statistics}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Different spike inference methods lead to different estimates of task related neurons}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Deconvolution and spike inference may degrade the ability to recover precisely timed responses}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Pairwise correlation distributions are affected by spike inference and deconvolution}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Deconvolution and spike inference results in different estimates of the dimensionality of population recordings}{section.2}% 8
+\BOOKMARK [1][-]{section.3}{Discussion}{}% 9
+\BOOKMARK [1][-]{section.4}{Methods}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Event rate estimation}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Tuned cells}{section.4}% 12
+\BOOKMARK [2][-]{subsection.4.3}{Touch-related responses}{section.4}% 13
+\BOOKMARK [2][-]{subsection.4.4}{Dimensionality}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.5}{Pairwise correlations}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{Supplemental}{}% 16
