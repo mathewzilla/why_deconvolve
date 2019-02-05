@@ -34,6 +34,14 @@
 \patchcmd{\@maketitle}{\end{center}}{\end{flushleft}}{}{}
 \makeatother
 
+% Supplement
+\newcommand{\beginsupplement}{%
+        \setcounter{table}{0}
+        \renewcommand{\thetable}{S\arabic{table}}%
+        \setcounter{figure}{0}
+        \renewcommand{\thefigure}{S\arabic{figure}}%
+     }
+
 %\title{\textbf{Why deconvolve Ca\textsuperscript{2+}? \\ \large A practical guide to recovering neural activity from cellular fluorescence imaging}}
 \title{\textbf{On the use of calcium deconvolution algorithms in practical contexts}}
 
@@ -165,7 +173,7 @@ In many spike inference methods papers \citep{Brown2004-tj, Paiva2010-qv,Theis20
 % USE ACTIVE VOICE - WE FOUND THAT .... (FIG 1 (e))
 Figure \ref{fig:GT_data} (e) shows the results from inferring spikes from ground truth data with Suite2P \citep{Pachitariu_undated-ui} using a range of an internal threshold parameter which trades off misses vs false detections. 
 
-We found that correlation coefficient increases as estimated firing rate increases (Fig \ref{fig:GT_data}(e)). As a consequence, if we choose the model parameters that maximise the correlation coefficient, the recovered spike-train consistently overestimates the ground truth rate of spiking (Fig \ref{fig:GT_data}(g), blue dots). Over the population, choosing model parameters that optimise correlation coefficient results in over and under estimates firing rate, in some cases by large margins (Figure \ref{fig:GT_data} (g,j), mean error ~200$\%$ overestimate of firing rate). We found similar results using the two other spike inference methods, with MLSpike and LZero both returning poor estimates of firing rate when optimised using correlation coefficient (Fig \ref{fig:GT_data}(h,i,j), blue dots, mean error ~50$\%$ overestimates for MLSpike, ~20$\%$ underestimates for LZero TO DO CHECK), indicating that it is correlation coefficient and not the methods per se that result in poor performance.
+We found that correlation coefficient increases as estimated firing rate increases (Fig. \ref{fig:GT_data}(e)). As a consequence, if we choose the model parameters that maximise the correlation coefficient, the recovered spike-train consistently overestimates the ground truth rate of spiking (Fig \ref{fig:GT_data}(g), blue dots). Over the population, choosing model parameters that optimise correlation coefficient results in over and under estimates firing rate, in some cases by large margins (Figure \ref{fig:GT_data} (g,j), mean error 79.47$\%$ overestimate of firing rate). We found similar results using the two other spike inference methods, with MLSpike and LZero both returning poor estimates of firing rate when optimised using correlation coefficient (Fig \ref{fig:GT_data}(h,i,j), blue dots, mean error 31.72$\%$ overestimates for MLSpike, 21.14$\%$ underestimates for LZero), indicating that it is correlation coefficient and not the methods per se that result in poor performance.
 
 In addition, correlation coefficient does not change smoothly with gradual changes in the threshold parameter, as can be seen in the lines for individual cells in Figure \ref{fig:GT_data} (e), which could lead to overfitting or noisy estimates of the best parameters. 
 
@@ -173,9 +181,9 @@ To address the weaknesses of Pearson correlation coefficient, we implemented the
 
 %This intuition is shown to be true when comparing the best estimate of firing rate to the true firing rate for each cell (green dots in Figure \ref{fig:GT_data} (g, j left)). 
 
-Across all three spike inference methods, optimising parameters with ER results in much better estimates of firing rate compared to optimisation with correlation coefficient  (mean error $\sim$0.1Hz, compare blue and green dots in \ref{fig:GT_data} (g-j)). 
+Across all three spike inference methods, optimising parameters with ER results in much better estimates of firing rate compared to optimisation with correlation coefficient  (mean error <10$\%$ - 0.12$\%$ Suite2P, 0.073$\%$ MLSpike, 0.05$\%$ LZero, compare blue and green dots in \ref{fig:GT_data} (g-j)). 
 %ER results in better estimates of firing rate than correlation coefficient when it is used to optimise parameters for the two other spike inference methods tested, MLSpike (Fig \ref{fig:GT_data} (h, j middle)) and LZero (Fig \ref{fig:GT_data} (i, j right)). 
-In sum, our results show that three different spike inference methods can accurately recover firing rate if Error Rate is used to optimise model parameters on ground truth data instead of correlation coefficient. \\
+In sum, our results show that three different spike inference methods can accurately recover firing rate if Error Rate is used to optimise model parameters on ground truth data instead of correlation coefficient. 
 
 %\emph{MDH: As we are making a comparison between PCC and ER here, we should group the results for the three algorithms. 
 %So figure 1e illustrates the problem with PCC for Suite2P; and figures 1g-l show that using “optimal” PCC gives errors in estimating firing rates for all three algorithms. Naively suggests algorithms are crap.
@@ -188,7 +196,7 @@ In sum, our results show that three different spike inference methods can accura
 All light microscopy experiments (including two photon imaging) have a `photon budget' (set by the microscope and sample) which can be deployed by the experimenters to achieve certain goals. Higher signal to noise can be achieved with high frame rates and zoomed in imaging (more pixels per cell), as is the case for the ground truth datasets analysed here (60Hz imaging). If the goal is to record from large numbers of neurons the overall photon budget must be spread more thinly per neuron, with smaller numbers of pixels per cell and lower frame rates, resulting in lower signal to noise ratios \citep{Peron2015-qz}. %Large scale Ca\textsuperscript{2+} imaging experiments are optimised to record from many neurons at once, and typically use lower frame rates and fewer pixels per cell than the ground truth experiments described above. 
 Given that the ground truth dataset described above was recorded at 60Hz, it is important to ask whether imaging at a lower frame rate improves the ability of Pearson correlation coefficient to recover ground truth spiking, and whether lower frame rates impair the ability of Error Rate to recover accurate spiking estimates.
 
-To assess the effect of sampling rate on spike inference we repeated the ground truth analysis, but with imaging data down-sampled to 7Hz and found similar results to the 60Hz case. Optimising spike inference parameters with Error-Rate leads to better estimates of firing rate than optimising with correlation-coefficient (Fig \ref{fig:GT_data_ds}). Interestingly, optimising with correlation coefficient leads to underestimates of firing rate at 7Hz (Fig \ref{fig:GT_data_ds} (d)), where overestimation is more typical with 60Hz data (Fig \ref{fig:GT_data}).
+To assess the effect of sampling rate on spike inference we repeated the ground truth analysis, but with imaging data down-sampled to 7Hz and found similar results to the 60Hz case. Optimising spike inference parameters with Error-Rate leads to better estimates of firing rate than optimising with correlation-coefficient (Fig \ref{fig:GT_data_ds}, mean absolute error 39.7$\%$ (-53.0,13.3,-52.9) for correlation coefficient, 7.8$\%$ (-8.3,10.4,-4.7) for Error Rate). Interestingly, optimising with correlation coefficient leads to underestimates of firing rate at 7Hz (Fig \ref{fig:GT_data_ds} (d)), where overestimation is more typical with 60Hz data (Fig \ref{fig:GT_data}).
 
 
 One goal of ground truth analysis is to find optimal analysis parameters for experiments where ground truth is not available. Figure \ref{fig:GT_data_params} shows the best parameters for each cell across spike inference methods and sampling rates. Across all conditions, there is substantial variability across cells, with best parameters varying over two orders of magnitude in some cases (left hand panels of Fig. \ref{fig:GT_data_params}). This suggests that the best parameters for one cell may perform poorly for another cell, and optimising spike inference parameters in the absence of ground truth data may be difficult.
@@ -199,72 +207,16 @@ One goal of ground truth analysis is to find optimal analysis parameters for exp
 \label{fig:GT_data_params}}}
 \end{figure}
 
-\textbf{MISSING LOGIC: how bad is performance on ground truth with a range of sub-optimal parameters?}\\
+To further illustrate this point we analyzed how firing rate estimates and Error Rate vary with deviations from the best analysis parameters (for Suite2P applied to downsampled data, as in Fig.\ref{fig:GT_data_ds}).  Fig. \ref{fig:GT_param_performance} (a) shows estimated firing rate departs from the true firing across a range of analysis parameters. Normalizing the results by each cell's true firing rate (Fig. \ref{fig:GT_param_performance} (b)) show that firing rate errors are particularly large for low firing rate neurons - a particular concern for applications of spike inference to data from cortex in awake animals where low firing rates are the norm \citep{OConnor2010-hd,Wohrer2013-rp}. Fig.\ref{fig:GT_param_performance} (c) shows how Error Rate changes as parameters are varied from the best parameters in Fig.\ref{fig:GT_data_ds}. Error Rate increases abruptly with small increases or decreases in the best parameters. Fig.\ref{fig:GT_param_performance} (d) shows the same data as in (c) but for a restricted range of analysis parameters, emphasising how Error Rate can increase with even very small changes in analysis parameters.
 
 \begin{figure}[h!]
 {\includegraphics[width=\textwidth]{full_figs/why_deconvolve_F1_4_colours.png}}
-{\caption{Best spike inference parameters varies across cells. X-axis: parameter value, Y-axis: cell ID (arbitrary but consistent order). Parameters for Suite2P (Threshold), MLSpike (A, tau, sigma) and LZero (lambda, scale) vary significantly across cells and sampling rates (rows), regardless of analysis metric (dot colour, ER: green, PCC: blue).
-\label{fig:GT_data_params}}}
+{\caption{Variability in spike inference performance with changes in analysis parameters. (a) For each cell (colours) the estimated firing rate (y-axis) varies substantially across analysis parameters (dots). Dashed black line indicates correct estimated firing rate. (b) as in (a) for normalized estimated firing rate (Estimated FR/true FR). (c) Error rate increases sharply with small changes away from the best analysis parameters. (d) as in (c) showing a small region of parameter space around the best parameters). All results are from Suite2P applied to downsampled data as in Fig.\ref{fig:GT_data_ds}.
+\label{fig:GT_param_performance}}}
 \end{figure}
 
-Together, these results show that modern spike-deconvolution methods can accurately recover neural activity, but the choice of metric for evaluation and fitting is of critical importance. Pearson correlation coefficient is a poor choice of metric as it returns inconsistent results with small changes in algorithm parameters, and leads to poor estimates of simple measures such as firing rate when used across methods and sampling rates. A spike-train-based method such as Error Rate\citep{Deneux2016-gu, Victor1996-cg}, or other recently developed methods based on information theory \citep{Theis2016-ee} or fuzzy set theory \citep{Reynolds2017-dr}. However, while good estimates of neural activity can be achieved with modern spike inference methods, the best parameters vary substantially between cells. This suggests spike inference may not be successful when ground truth data is not available, and parameters cannot be optimised for each cell.
+Together, these results show that modern spike-inference methods can accurately recover neural activity, but the choice of metric for evaluation and fitting of parameters are of critical importance. Pearson correlation coefficient is a poor choice of metric as it returns inconsistent results with small changes in algorithm parameters, and leads to poor estimates of simple measures such as firing rate when used across methods and sampling rates. A spike-train-based method such as Error Rate\citep{Deneux2016-gu, Victor1996-cg}, or other recently developed methods based on information theory \citep{Theis2016-ee} or fuzzy set theory \citep{Reynolds2017-dr}, are more appropriate. However, while good estimates of neural activity can be achieved with modern spike inference methods the best parameters vary substantially between cells, and small changes in analysis parameters result in poor spike inference performance. This suggests spike inference may not be successful when ground truth data is not available, and parameters cannot be optimised for each cell.
 %Reynolds - a continuous approach based on fuzzy set theory. Theis - information gain.
-
-% BEHRENS: Putting this citation here says that Berens et al already had all these results (good fits, and why PCC is poor).  Actually we’re suggesting they had neither: because they used PCC to evaluate, their competition could not have chosen the “best” algorithm - as the “best” algorithm by PCC does not fit the data.
-
-
-
-%\st{TO DO: add a results for other methods to Fig 1 (e).
-%Also - important re application to large-scale imaging like Peron - repeat the analysis using degraded data (lower sampling rate to 7Hz in the first instance).}
-
-
-%\begin{figure}%[h!]
-%\centering
-%\subfigure[]{\includegraphics[trim={50 105 40 170},clip,width=0.7\textwidth]{figs/VP96_D16.pdf}}
-%\subfigure[]{\includegraphics[trim={350 70 50 75},clip,width=0.4\textwidth]{figs/ER_PCC_FR.pdf}}%
-%\subfigure[]{\includegraphics[trim={50 70 350 75},clip,width=0.4\textwidth]{figs/ER_PCC_FR.pdf}}
-%\subfigure[]{\includegraphics[trim={150 18 150 25},clip,width=0.4\textwidth]{figs/ER_PCC_FR_compare.pdf}}%
-%\subfigure[]{\includegraphics[trim={180 18 190 25},clip,width=0.4\textwidth]{figs/stripe_PCC_ER_square.pdf}}
-%% \subfigure[]{\includegraphics[trim={50 18 50 50},clip,width=0.4\textwidth]{stripe_PCC_ER.eps}}
-%\caption{\label{fig:deconv_metrics1} Differences in spike metrics. (a) Left: ER. Victor and Purpura (1996) proposed a spike metric to compare spike trains. This metric is generated by determining the number of elementary operations (shift, addition, or deletion of individual spikes - depicted as rows in here) required to match two spike trains, up to some temporal precision (here 0.5s). Right: In Deneaux et al 2016 the Error Rate (ER) is similarly computed as a normalised ratio of sensitivity vs precision in spike detection. Detections are counted to within 0.5s. 
-%(b) PCC as a function of estimated firing rate (using Suite2P, Pachitariu et al 2017). As deconvolution parameters are changed to incrementally increase the estimated firing rate - to trade off hits at the cost of false positive errors - PCC continues to improve. (c) In contrast, ER is penalised for overestimating firing rate leading to local minima. Comparing (b) and (c) ER changes smoothly with gradual changes in deconvolution parameters, whereas PCC is more stochastic, leading to noisy estimates of the best parameters. Colours are different cells. (d) Estimated firing rate for `best' deconvolution parameters versus real firing rate. Best parameters are taken as the lowest or highest points in (b) and (c), respectively. (e) Firing rate error (estimated FR - true FR). PCC both over and underestimates firing rate. ER also overestimates firing rate but to a lesser degree. Lines are means.}
-%\end{figure}
-%
-
-
-
-
-%
-%\begin{figure}%[h!]
-%\centering
-%\subfigure[]{\includegraphics[trim={310 250 35 270},clip,width=0.5\textwidth]{figs/ER_PCC_FR_ds.pdf}}%
-%\subfigure[]{\includegraphics[trim={30 250 310 270},clip,width=0.5\textwidth]{figs/ER_PCC_FR_ds.pdf}}
-%\subfigure[]{\includegraphics[trim={150 235 150 240},clip,width=0.45\textwidth]{figs/ER_PCC_FR_compare_ds.pdf}}
-%\subfigure[]{\includegraphics[trim={150 235 150 240},clip,width=0.45\textwidth]{figs/stripe_PCC_ER_square_ds.pdf}}
-%\caption{\label{fig:deconv_metrics_ds} Same as figure \ref{fig:deconv_metrics1} but with fluorescence data downsampled to 7Hz to mimic population imaging experiments.}
-%\end{figure}
-
-
-
-
-%\begin{figure}%[h!]
-%\centering
-%\subfigure[]{\includegraphics[trim={150 235 150 240},clip,width=0.4\textwidth]{figs/ER_PCC_FR_compare_MLSpike.pdf}}%
-%\subfigure[]{\includegraphics[trim={150 235 150 240},clip,width=0.4\textwidth]{figs/stripe_PCC_ER_square_MLSpike.pdf}}
-%\subfigure[]{\includegraphics[trim={80 200 80 200},clip,width=0.4\textwidth]{figs/ER_PCC_FR_compare_MLSpike_ds.pdf}}%
-%\subfigure[]{\includegraphics[trim={90 200 80 200},clip,width=0.4\textwidth]{figs/stripe_PCC_ER_square_MLSpike_ds.pdf}}
-%\caption{\label{fig:deconv_metrics_MLSpike} Comparing PCC and ER optimised deconvolution using MLSpike (Deneux et al 2016). (a,b) original sampling rate data. (c,d) downsampled data.}
-%\end{figure}
-
-
-%\begin{figure}%[h!]
-%\centering
-%\subfigure[]{\includegraphics[trim={100 200 80 200},clip,width=0.4\textwidth]{figs/ER_PCC_FR_compare_LZero.pdf}}%
-%\subfigure[]{\includegraphics[trim={110 200 80 200},clip,width=0.4\textwidth]{figs/stripe_PCC_ER_square_LZero.pdf}}
-%\subfigure[]{\includegraphics[trim={110 200 100 200},clip,width=0.4\textwidth]{figs/ER_PCC_FR_compare_LZero_ds.pdf}}%
-%\subfigure[]{\includegraphics[trim={110 200 90 200},clip,width=0.4\textwidth]{figs/stripe_PCC_ER_square_LZero_ds.pdf}}
-%\caption{\label{fig:deconv_metrics_LZero} Comparing PCC and ER optimised deconvolution using LZero.(Jewell and Witten 2017). (a,b) original sampling rate data. (c,d) downsampled data.}
-%\end{figure}
 
 %\clearpage
 \subsection{Spike inference and deconvolution methods disagree on estimates of simple neural statistics}
@@ -283,7 +235,7 @@ We can redraw the top row A and C;
 For the parameters in top panel B, as far as I know these aren’t used here (just “touch”), so an be eliminated too. If we need them, then the redrawn A panel can have the angle and curvature parameters from B}}
 \end{figure}
 
-We have shown that different spike inference methods can recover good estimates of neural activity if parameters are set appropriately. However, it is not possible to fit parameters to representative ground truth data for most experiments. On a real-world example, does spike inference result in better estimates of neural activity than more simple deconvolution or de-noising processes? 
+We have shown that different spike inference methods can recover good estimates of neural activity if parameters are set appropriately. However, it is not possible to fit parameters to representative ground truth data for most experiments. On a real-world example, does spike inference result in good estimates of neural activity, and how do these estimates compare to simple deconvolution or de-noising processes? 
 
 To determine the effect of analysis method and parameter choice on simple measures of neuron activity in the absence of ground truth, we compared the results of analysis of df/f Ca\textsuperscript{2+}  from a single experiment from \citealt{Peron2015-qz} (see Figure \ref{fig:peron_setup}) to eight different approaches for deconvolution, de-noising and spike inference. We compared the three spike inference methods tested in Section \ref{GT} - Suite2P, MLSpike and LZero - to a kernel-convolved version of the returned spikes (i.e. denoised df/f); de-noised Ca\textsuperscript{2+} as reported in the original \citet{Peron2015-qz} study; and the simple deconvolution approach of \citet{Yaksi2006-ic} (see Methods for implementation details).
 
@@ -295,7 +247,7 @@ To determine the effect of analysis method and parameter choice on simple measur
 \caption{\label{fig:simple_stats} Estimated `event rate' for all cells in an example session. For the first 6 methods (Calcium - LZero$_{kernel}$), events are detected as fluorescence transients greater in magnitude than 3 std deviations of background noise. Background noise = data - smoothed version of data, to eliminate slow transients. Methods 7-9 (Suite2P$_{events}$ - LZero$_{events}$) return a spike count per time bin. (a) Histograms of event rate per cell for each method. (b) Same data as in (a) but plotted as box and whisker plots. Notch = median, box limits = 25th and 75th percentile, whiskers = extent of data up to 1.5 IQR (c) Proportion of active (gray) vs silent (black) cells for each method. Silent = event rate < 0.0083Hz.}
 \end{figure*}
 
-In \citealt{Peron2015-qz} two-photon Ca\textsuperscript{2+} imaging was used to record neural activity from up to $\sim$2000 neurons simultaneously at 7Hz from superficial barrel (Layer 2/3 somatosensory) cortex as mice performed a head-fixed tactile localisation task with their whiskers. For the results presented here 1552 neurons were recorded for a total of just over 56 minutes (23559 time points). This relatively long recording ensured good estimation of the measured parameters (i.e. pairwise correlations are stable, see Fig. \ref{fig:supp_cxy_stability}).
+In \citealt{Peron2015-qz} two-photon Ca\textsuperscript{2+} imaging was used to record neural activity from up to $\sim$2000 neurons simultaneously at 7Hz from superficial barrel (Layer 2/3 somatosensory) cortex as mice performed a head-fixed tactile localisation task with their whiskers. For the results presented here 1552 neurons were recorded for a total of just over 56 minutes (23559 time points). This relatively long recording ensured good estimation of the measured parameters (e.g. pairwise correlations are stable, see Fig. \ref{fig:supp_cxy_stability}).
 
 
 %\begin{figure}[h!]
@@ -305,7 +257,9 @@ In \citealt{Peron2015-qz} two-photon Ca\textsuperscript{2+} imaging was used to 
 %\caption{\label{fig:peron_setup} Peron et al. 2015 experimental design. TO DO EXPAND description}
 %\end{figure}
 
-The most basic analysis of neural activity is to determine the mean firing rate of each cell in the recording - a quantity that is known to follow an approximately log normal distribution at the population level \citep{Wohrer2013-rp}. We determined the mean spike/event rate per cell for all approaches. Figure \ref{fig:simple_stats} (a) and (b) show that no two methods return the same distribution of spike/event rates. The deconvolution methods (Yaksi - LZero$_{kernel}$) appear to overestimate the average firing rate of the population as well as the number of cells with high firing rates. Spike inference methods can be tuned to produce qualitatively correct distributions (median near zero, long right skewed tails), but they disagree quantitatively. \textbf{TO DO: Add back in 'straw man' results based on best ground truth parameters?}. \emph{Need to clarify 'hand tuning' and put the GT derived params first, then hand tuned results}.
+The most basic analysis of neural activity is to determine the mean firing rate of each cell in the recording - a quantity that is known to follow an approximately log normal distribution at the population level \citep{Wohrer2013-rp}. We determined the mean spike/event rate per cell for all approaches (see Methods). Figure \ref{fig:simple_stats} (a) and (b) show that no two methods return the same distribution of spike/event rates. The deconvolution methods (Yaksi - LZero$_{kernel}$) appear to overestimate the average firing rate of the population as well as the number of cells with high firing rates. Spike inference methods can be tuned to produce qualitatively correct distributions (median near zero, long right skewed tails), but they disagree quantitatively. 
+
+\textbf{TO DO: Add back in 'straw man' results based on best ground truth parameters?}. \emph{Need to clarify 'hand tuning' and put the GT derived params first, then hand tuned results}.
 
 It has been estimated from cell-attached recordings that $\sim$13\% of somatosensory neocortical cells are silent during the pole localisation task (fewer than one spike every two minutes, \citealt{OConnor2010-hd}), a quantity increasing to $\sim$26\% in Layer 2/3. For the nine approaches we tested, in seven the estimated proportion of silent cells to be below 10\%, with wide disagreement between the other two methods (Figure \ref{fig:simple_stats} (c)). Even for simple statistics, the choice of deconvolution or spike inference method results in widely different results.
 
@@ -464,12 +418,8 @@ Spike inference or deconvolution is often employed to increase the ability to de
 
 
 
-A goal of many Ca\textsuperscript{2+} imaging experiments is to record from populations of neurons, and then perform clustering or dimensionality reduction. These analyses often rely on estimates of pairwise correlations (CITATION NEEDED). The methods tested in this study are designed to remove noise and sharpen temporal responses, which would lead to more accurate estimates of pairwise correlation. Figure \ref{fig:cxy_dist} (a) and (b) show the distributions of pairwise correlation coefficients computed separately for each method. To aid interpretation of these results we also computed pairwise correlations for five different data surrogates: \\
-\indent - Shifted: the fluorescence time series for each cell was randomly shifted in time (using Matlab's circshift function) by up to 10000 frames. LOGIC: to preserve each cell's autocorrelation\\
-\indent - Scrambled - elements of the original N x T data matrix were sampled randomly (without replacement) to generate a new data matrix. LOGIC: keep true data distribution but randomize everything else\\
-\indent - Randn - pseudorandom values drawn from a normal distribution. LOGIC: Totally random. N.B. Key here is the scrambled data is identical, as PCC doesn't care about the data distribution per se, only the covariability in the data i.e. they both go up, regardless of whether it's a twofold or a tenfold increase\\
-\indent - Conv (kernel) - original data convolved with an exponentially decaying kernel as is used in the MLSpike and Suite2P deconvolution methods. LOGIC: to show the effect that smoothing has on the correlation distribution \\
-\indent - Shuffled rows - like the 'scrambled' data, but shuffling was done separately for each cell (rows of the data matrix). LOGIC: to preserve differences in event rate across neurons. Again, this shouldn't be any different to the scrambled data as PCC is invariant to affine transformations i.e. same tuning but larger changes in firing rate.\\
+A goal of many Ca\textsuperscript{2+} imaging experiments is to record from populations of neurons, and then perform clustering or dimensionality reduction. These analyses often rely on estimates of pairwise correlations (CITATION NEEDED). The methods tested in this study are designed to remove noise and sharpen temporal responses, which would lead to more accurate estimates of pairwise correlation. Figure \ref{fig:cxy_dist} (a) and (b) show the distributions of pairwise correlation coefficients computed separately for each method. To aid interpretation of these results we also computed pairwise correlations for five different data surrogates (see methods).
+
 
 
 \emph{Description}
@@ -596,7 +546,7 @@ In addition, Pachitariu et al's approach assumes that cells respond consistently
 \clearpage
 \section{Methods}
 \subsection*{Ground truth data}
-Ground truth data was accessed from \href{http://crcns.org/data-sets/methods/cai-1}{crcns.org} citep{Svoboda2015-ym}, and the experiments have been described previously \cite{Chen2013-nv}. Briefly, ...
+Ground truth data was accessed from \href{http://crcns.org/data-sets/methods/cai-1}{crcns.org} \citep{Svoboda2015-ym}, and the experiments have been described previously \cite{Chen2013-nv}. Briefly, ...
 
 \subsection*{Spike train metrics}
 % NB. script that generates these results is deconv_downsample.m
@@ -624,8 +574,9 @@ Experiment overview.
 Data prep.
 
 \subsection{Event rate estimation}
+Spike inference methods (Suite2P$_{events}$,MLSpike$_{events}$, LZero$_{events}$) return estimated spikes which were converted into mean event rates (Hz) per cell. Event rate for continuous methods (Calcium, Peron, Yaksi, Suite2P$_{kernel}$,MLSpike$_{kernel}$, LZero$_{kernel}$) for each cell was determined by counting activity/fluorescence events greater than three standard deviations of the background noise. Background noise was calculated by taking a four-point moving average and subtracting this from the activity/fluorescence trace. Event rate was then computed in Hz.
 
-Also silent cell calculation.
+Silent cells were defined as cells with event rates below 0.0083Hz (or fewer than one spike per two minutes of recording) as in \citep{OConnor2010-hd}.
 
 \subsection{Tuned cells}
 Following Peron
@@ -633,12 +584,23 @@ Following Peron
 Tuned cell agreement.
 
 \subsection{Touch-related responses}
+Touch-tuned cells were determined by computing touch-triggered average activity for each cell, before calculating whether the data distribution of peak touch-induced activity exceeds the expected activity of shuffled data. In more detail, the time of first touch - between the mouse's whisker and the metal pole - on each trial was recorded. For each touch time one second (seven data samples) was extracted before and after the frame closest to touch (15 samples total), and the mean activity was calculated. The time of peak touch-triggered average activity was calculated, and a ranksum test (bonferroni corrected) between the true data distribution at peak time and a matched random sample of data from the same cell. This test determined whether peak touch-triggered activity was significantly different from chance. 
 
-\subsection{Dimensionality}
 
 \subsection{Pairwise correlations}
+Pairwise correlations were calculated for all pairs of neurons in Matlab (corrcoef) at the data sampling rate (7Hz). Correlations between correlation matrices (Fig. \ref{fig:cxy_comparison}) were computed between the unique pairwise correlations from each method (i.e. {\tt CXY(find(triu(CXY)))}).
 
-Random data surrogates.
+Random data surrogates: \\ 
+\indent - Shifted: the fluorescence time series for each cell was randomly shifted in time (using Matlab's circshift function) by up to 10000 frames. LOGIC: to preserve each cell's autocorrelation\\
+\indent - Scrambled - elements of the original N x T data matrix were sampled randomly (without replacement) to generate a new data matrix. LOGIC: keep true data distribution but randomize everything else\\
+\indent - Randn - pseudorandom values drawn from a normal distribution. LOGIC: Totally random. N.B. Key here is the scrambled data is identical, as PCC doesn't care about the data distribution per se, only the covariability in the data i.e. they both go up, regardless of whether it's a twofold or a tenfold increase\\
+\indent - Conv (kernel) - original data convolved with an exponentially decaying kernel as is used in the MLSpike and Suite2P deconvolution methods. LOGIC: to show the effect that smoothing has on the correlation distribution \\
+\indent - Shuffled rows - like the 'scrambled' data, but shuffling was done separately for each cell (rows of the data matrix). LOGIC: to preserve differences in event rate across neurons. Again, this shouldn't be any different to the scrambled data as PCC is invariant to affine transformations i.e. same tuning but larger changes in firing rate.\\
+
+
+\subsection{Dimensionality}
+To determine the dimensionality of each dataset we performed eigendecomposition of the covariance matrix of each dataset. The resultant eigenvalues were sorted into descending order, and the variance explained ({\tt cumsum(egs)/sum(egs)}) plotted.
+
 
 \subsection*{List of deconvolution methods}
 \subsubsection*{Suite2P}
@@ -660,7 +622,7 @@ Random data surrogates.
 MLSpike can return a maximum a posteriori spike train, or a spike probability per time step. We show results for both denoted MLSpike$_{events}$ and MLSpike$_{pspike}$
 
 \subsubsection*{LZero}
-The method we refer to as \texttt{LZero} was developed by Sean Jewell and Daniela Witten from U.Washington, Seatle, USA. The goal for this implementation was to cast spike detection as a change-point detection problem, which could be solved with an existing $l_{0}$ optimization algorithm. In their paper Jewell and Witten show that the $l_{0}$ solution is better than previously implemented $l_{2}$ solutions, with results much closer to the real spike train ($l_{2}$ solutions tend to overestimate the true firing rate). Details can be found in the paper:\\
+The method we refer to as \texttt{LZero} was developed by Sean Jewell and Daniela Witten from U.Washington, Seattle, USA. The goal for this implementation was to cast spike detection as a change-point detection problem, which could be solved with an existing $l_{0}$ optimization algorithm. In their paper Jewell and Witten show that the $l_{0}$ solution is better than previously implemented $l_{2}$ solutions, with results much closer to the real spike train ($l_{2}$ solutions tend to overestimate the true firing rate). Details can be found in the paper:\\
 
 \noindent Jewell, Sean, and Daniela Witten. "Exact Spike Train Inference Via $l_{0}$ Optimization." arXiv preprint arXiv:1703.08644 (2017).\\
 
@@ -682,6 +644,7 @@ The method we refer to as \texttt{LZero} was developed by Sean Jewell and Daniel
 Where a spike inference method returns spike rates per time point, these are plotted as Method$_{events}$. To compare to other methods that return a de-noised df/f or firing rate estimate, these events are convolved with a calcium kernel and plotted as Method$_{kernel}$.
 
 \clearpage
+\beginsupplement
 \section{Supplemental}
 
 \begin{figure}[h!]
