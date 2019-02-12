@@ -1,53 +1,53 @@
-This is BibTeX, Version 0.99d (TeX Live 2012)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: main.aux
 The style file: plainnat.bst
-Database file #1: references.bib.bib
+Database file #1: references.bib
 Warning--empty journal in Ganmor2016-uf
 Warning--empty journal in Jewell2017-pr
 Warning--empty journal in Pachitariu_undated-ui
 Warning--empty year in Pachitariu_undated-ui
 Warning--empty year in Pachitariu_undated-ui
 Warning--empty note in Reynolds2017-dr
-You've used 17 entries,
+You've used 18 entries,
             2773 wiz_defined-function locations,
-            711 strings with 9019 characters,
-and the built_in function-call counts, 10899 in all, are:
-= -- 879
-> -- 1005
-< -- 3
-+ -- 336
-- -- 318
-* -- 1096
-:= -- 1758
-add.period$ -- 50
-call.type$ -- 17
-change.case$ -- 157
-chr.to.int$ -- 16
-cite$ -- 40
-duplicate$ -- 343
-empty$ -- 634
-format.name$ -- 341
-if$ -- 2148
+            716 strings with 9255 characters,
+and the built_in function-call counts, 11197 in all, are:
+= -- 905
+> -- 1015
+< -- 4
++ -- 340
+- -- 321
+* -- 1111
+:= -- 1807
+add.period$ -- 53
+call.type$ -- 18
+change.case$ -- 161
+chr.to.int$ -- 17
+cite$ -- 42
+duplicate$ -- 362
+empty$ -- 664
+format.name$ -- 345
+if$ -- 2210
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 16
-newline$ -- 92
-num.names$ -- 68
-pop$ -- 295
+missing$ -- 17
+newline$ -- 97
+num.names$ -- 72
+pop$ -- 304
 preamble$ -- 1
-purify$ -- 140
+purify$ -- 143
 quote$ -- 0
-skip$ -- 293
+skip$ -- 306
 stack$ -- 0
-substring$ -- 335
-swap$ -- 31
+substring$ -- 337
+swap$ -- 32
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 187
+type$ -- 198
 warning$ -- 6
-while$ -- 73
+while$ -- 76
 width$ -- 0
-write$ -- 218
+write$ -- 230
 (There were 6 warnings)
