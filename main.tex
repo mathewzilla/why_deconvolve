@@ -241,9 +241,9 @@ To determine the effect of analysis method and parameter choice on simple measur
 
 %\emph{We’ll need to explain the collection of algorithms here, including why we’re expanding from the original 3. (Spike inference vs plain deconvolution to understand if we gain anything; and compare all to raw Ca2+)}
 
-%trim={0 85 40 80},clip,
+%trim={0 85 40 80},clip, trim={0 85 40 0},clip,
 \begin{figure*}
-\includegraphics[trim={0 85 40 0},clip,width=\textwidth]{full_figs/why_deconvolve_F3_3.png}
+\includegraphics[width=\textwidth]{full_figs_19v2/why_deconvolve_F3_19v2.png}
 \caption{\label{fig:simple_stats} Estimated `event rate' for all cells in an example session. For the first 6 methods (Calcium - LZero$_{kernel}$), events are detected as fluorescence transients greater in magnitude than 3 std deviations of background noise. Background noise = data - smoothed version of data, to eliminate slow transients. Methods 7-9 (Suite2P$_{events}$ - LZero$_{events}$) return a spike count per time bin. (a) Histograms of event rate per cell for each method. (b) Same data as in (a) but plotted as box and whisker plots. Notch = median, box limits = 25th and 75th percentile, whiskers = extent of data up to 1.5 IQR (c) Proportion of active (gray) vs silent (black) cells for each method. Silent = event rate < 0.0083Hz.}
 \end{figure*}
 
@@ -257,11 +257,11 @@ In \citealt{Peron2015-qz} two-photon Ca\textsuperscript{2+} imaging was used to 
 %\caption{\label{fig:peron_setup} Peron et al. 2015 experimental design. TO DO EXPAND description}
 %\end{figure}
 
-The most basic analysis of neural activity is to determine the mean firing rate of each cell in the recording - a quantity that is known to follow an approximately log normal distribution at the population level \citep{Wohrer2013-rp}. We determined the mean spike/event rate per cell for all approaches (see Methods). Figure \ref{fig:simple_stats} (a) and (b) show that no two methods return the same distribution of spike/event rates. The deconvolution methods (Yaksi - LZero$_{kernel}$) appear to overestimate the average firing rate of the population as well as the number of cells with high firing rates. Spike inference methods can be tuned to produce qualitatively correct distributions (median near zero, long right skewed tails), but they disagree quantitatively. 
+The most basic analysis of neural activity is to determine the mean firing rate of each cell in the recording - a quantity that is known to follow an approximately log normal distribution at the population level \citep{Wohrer2013-rp}. We determined the mean spike/event rate per cell for all approaches (see Methods). Figure \ref{fig:simple_stats} (a) and (b) show that no two methods return the same distribution of spike/event rates. While some methods produce qualitatively correct distributions (median near zero, long right skewed tails), they disagree quantitatively (Calcium, Peron, Suite2P$_{events}$, LZero$_{events}$). Other methods appear to overestimate the average firing rate of the population as well as the number of cells with high firing rates (Yaksi, MLSpike$_{events}$). Applying a kernel to inferred spikes affects the result in interesting ways (Suite2P$_{kernel}$, MLSpike$_{kernel}$, LZero$_{kernel}$). Distributions become broader, and mean event rates are increased, suggesting noise in the spike inference process is amplified through the additional processing step of convolution with a kernel and thresholding.
 
 % \textbf{TO DO: Add back in 'straw man' results based on best ground truth parameters?}. \emph{Need to clarify 'hand tuning' and put the GT derived params first, then hand tuned results}.
 
-It has been estimated from cell-attached recordings that $\sim$13\% of somatosensory neocortical cells are silent during the pole localisation task (fewer than one spike every two minutes, \citealt{OConnor2010-hd}), a quantity increasing to $\sim$26\% in Layer 2/3. For the nine approaches we tested, in seven the estimated proportion of silent cells to be below 10\%, with wide disagreement between the other two methods (Figure \ref{fig:simple_stats} (c)). Even for simple statistics, the choice of deconvolution or spike inference method results in widely different results.
+It has been estimated from cell-attached recordings that $\sim$13\% of somatosensory neocortical cells are silent during the pole localisation task (cells emitting fewer than one spike every two minutes, \citealt{OConnor2010-hd}), a quantity increasing to $\sim$26\% in Layer 2/3. For the nine approaches we tested, in six the estimated proportion of silent cells to be below 8\%, with wide disagreement between the other three methods (Figure \ref{fig:simple_stats} (c)). Even for simple statistics, the choice of deconvolution or spike inference method results in widely different results.
 
 %\begin{figure}%[h!]
 %\centering
@@ -279,7 +279,7 @@ It has been estimated from cell-attached recordings that $\sim$13\% of somatosen
 
 
 %\clearpage
-\subsection{Different spike inference methods lead to different estimates of task related neurons}
+\subsection{Estimates of the number of task related neurons are affected by analysis method}
 %\noindent \emph{\textbf{Results in brief}\\
 %- Absolute firing rate may not be important, so what about task related activity?\\
 %- Different methods disagree about the number of task-tuned cells\\
@@ -291,18 +291,18 @@ It has been estimated from cell-attached recordings that $\sim$13\% of somatosen
 %}
 
 
-For many analyses, it is the relative activity of a cell and not its exact firing rate that is important. A common analysis is to ask whether a neuron's activity is task related - does a cell respond more during a specific epoch of the task than would be expected from a random process. Such task tuning may then imply that a given cell or region of the brain is involved in the task, and serve as a target for future causal or manipulation studies. We quantified the proportion of task related neurons in our dataset following the approach of \citealt{Peron2015-qz}. Calcium/instantaneous firing rate/ events for each cell are shuffled in time before a trial-averaged PSTH is generated, and the largest peak in the PSTH is recorded. This is repeated 10,000 times. 
+For many analyses, it is the relative activity of a cell and not its exact firing rate that is important. A common analysis is to ask whether a neuron's activity is task related - does a cell respond more during a specific epoch of a task or experiment than would be expected from a random process. Such task tuning may then imply that a given cell or region of the brain is involved in the task, and serve as a target for further study. We quantified the proportion of task related neurons in our dataset following the approach of \citealt{Peron2015-qz}. Processed Calcium fluorescence for each cell was shuffled in time before trial-averaged activity was calculated, and the largest peak in each shuffled average was recorded. This is repeated 10,000 times. 
 
 
 \begin{figure}
-\includegraphics[trim={0 0 0 0},clip,width=\textwidth]{full_figs/why_deconvolve_F4_3.png}
-\caption{\label{fig:tuned_cells} Tuned cells. Tuned cells were determined through shuffle tests (following Peron et al 2015, see Methods).  (a) Number of tuned cells per deconvolution method. Error bars are 95\% binomial confidence intervals (Jeffreys interval) (b) Agreement between methods. Bars show total number of cells classified as tuned by N methods. (c) Agreement between continuous signal methods (left) and spike inference methods (right). (d) Array of tuned cell identities, separately for continuous signal methods (left) and spike inference methods (right). Black = tuned, white = not tuned. Rows are cells, ordered by the number of methods that classify that cell as tuned (agreement, as plotted in c).}
+\includegraphics[trim={0 375 0 0},clip,width=\textwidth]{full_figs_19v2/why_deconvolve_F4_19v2.png}
+\caption{\label{fig:tuned_cells} Tuned cells. Tuned cells were determined through shuffle tests (following Peron et al 2015, see Methods).  (a) Number of tuned cells per deconvolution method. Error bars are 95\% binomial confidence intervals (Jeffreys interval) (b) Agreement between methods. Bars show total number of cells classified as tuned by N methods. (c) Agreement between continuous signal methods (left) and spike inference methods (right). (d) Arrays of tuned cell identities, separately for continuous signal methods (left) and spike inference methods (right). Black = tuned, white = not tuned. Rows are cells, ordered by the number of methods that classify that cell as tuned (i.e. agreement, as plotted in c).}
 \end{figure}
 
-A distribution of shuffled PSTH peak magnitudes is generated, and if the peak of the true (data) PSTH is larger than the 95\%ile of the shuffled distribution, in either the Left or Right (Go, No Go) trials, that cell is considered `tuned'.
-Firstly, each method estimates a different proportion of tuned vs untuned cells, both in comparison to estimates from the raw Ca\textsuperscript{2+}, and in comparison to one another (Fig. \ref{fig:tuned_cells} (a)). Secondly, the methods only agree on the tuned status of individual neurons for $<$50 cells (from a range of 50 - 250 tuned cells Fig. \ref{fig:tuned_cells} (b)). \textbf{TO DO get precise number?}. 
+A distribution of shuffled peak trail-average magnitudes is generated, and if the peak of the true (data) trial-average is larger than the 95\%ile of the shuffled distribution - in either the `lick left' or `lick right' trials - that cell is considered `tuned'.
+Firstly, each method estimates a different proportion of tuned vs untuned cells, both in comparison to estimates from the raw Ca\textsuperscript{2+} fluorescence, and in comparison to one another (Fig. \ref{fig:tuned_cells} (a)). Secondly, the methods only agree on the tuned status of individual neurons for 21 cells (from a range of 44 - 734 tuned cells Fig. \ref{fig:tuned_cells} (b)). 
 
-There is still substantial disagreement when comparing methods within class: whether looking at deconvolution and de-noising methods (Fig. \ref{fig:tuned_cells} (e), left) or spike inference methods (Fig. \ref{fig:tuned_cells} (e), right), all methods only agree on the tuned status of $<$ 50 cells. This result is problematic, as this disagreement could mean either (a) some tuned cells are missed (b) some un-tuned cells are classed as tuned (c) both. Looking at each cell's tuned status in more detail (Fig. \ref{fig:tuned_cells} (d)) it becomes clear that while some cells are only classified as tuned by one or two methods, there is wider agreement between methods about a larger group of cells \textbf{TO DO get proportion}, suggesting agreement between methods may a robust cue to tuning.
+There is still substantial disagreement when comparing methods within class: whether looking at deconvolution and de-noising methods (`continuous methods', Fig. \ref{fig:tuned_cells} (c), left) or spike inference methods (Fig. \ref{fig:tuned_cells} (c), right), all methods only agree on the tuned status of $<$ 50 cells (38 for continuous methods, 25 for spike inference methods). This result is problematic, as this disagreement could mean either (i) some tuned cells are missed (ii) some un-tuned cells are classed as tuned (iii) both. Looking at each cell's tuned status in more detail (Fig. \ref{fig:tuned_cells} (d)) it becomes clear that while some cells are only classified as tuned by one or two methods, there is wider agreement between methods about a larger group of cells, suggesting agreement between methods may a robust cue to tuning.
 
 %There is substantial disagreement between methods.
 
@@ -316,16 +316,16 @@ There is still substantial disagreement when comparing methods within class: whe
 %\caption{\label{fig:tuned_cells} Tuned cells. Tuned cells were determined through shuffle tests (see main text).  (a) Number of tuned cells per deconvolution method. Error bars are 95\% binomial confidence intervals (Jeffreys interval) (b) Array of tuned cell identities. Black = tuned, white = not tuned. Rows are cells, ordered by the number of methods that classify that cell as tuned. (c) Zoomed in version of (b). There is substantial disagreement between methods.}
 %\end{figure}
 
-Figure \ref{fig:tuned_cells_psth} shows the trial-averaged activity for cells classified as tuned when looking at raw Calcium data only (Fig \ref{fig:tuned_cells_psth} (a)), or where multiple methods agree that the cells are tuned (Fig \ref{fig:tuned_cells_psth} (b-d)). It is unclear whether peaks in Calcium activity in (a) are artifactual or real, as they are often eliminated in the other methods. However, in cells classified as task-related by 6 methods (Fig \ref{fig:tuned_cells_psth} (c)) clear peaks of activity can be seen across methods, with those peaks lasting for multiple time frames. Comparison across methods could prove a powerful approach increase the reliability of fluorescence imaging analysis.
+Figure \ref{fig:tuned_cells_psth} shows the normalised trial-averaged activity (rows) for cells classified as tuned when looking at Calcium fluorescence data only (Fig \ref{fig:tuned_cells_psth} (a)), or where multiple methods agree that the cells are tuned (Fig \ref{fig:tuned_cells_psth} (b-d)). It is unclear whether peaks in Calcium activity in (a) are artefactual or real, as they are often not present in the trail averaged activity from other methods (compare panels in Fig \ref{fig:tuned_cells_psth} (a)). However, in cells classified as task-related by 6 or more methods (Fig \ref{fig:tuned_cells_psth} (c,d)) clear peaks of activity can be seen across methods, with those peaks lasting for multiple time frames. Comparison across methods could prove a powerful approach to increase the reliability of fluorescence imaging analysis.
 
 
 \begin{figure}
-\includegraphics[width=\textwidth]{full_figs/why_deconvolve_F5_2.png}
-\caption{\label{fig:tuned_cells_psth}Degree of agreement between methods can identify strongly tuned cells. (a) Example normalised (z-score) trial-average histograms for 50 cells (rows) classified as tuned in an analysis of raw Calcium data. Each subsequent panel shows trial-average histograms for the same cells, but following processing by each of the eight deconvolution/spike inference methods. (b) - (d) as in (a) but showing trial-average data for cells classed as tuned by 3, 6 and all 9 methods. \textbf{TO DO: Add marker to show which methods classify which cells as tuned?}}
+\includegraphics[width=\textwidth]{full_figs_19v2/why_deconvolve_F5_19v2.png}
+\caption{\label{fig:tuned_cells_psth}Degree of agreement between methods can identify strongly tuned cells. (a) Example normalised (z-score) trial-average histograms for 50 cells (rows) classified as tuned in an analysis of raw Calcium data. Each subsequent panel shows trial-average histograms for the same cells, but following processing by each of the eight deconvolution/spike inference methods. (b) - (d) as in (a) but showing trial-average data for cells classed as tuned by 3, 6 and all 9 methods. \emph{NB: Add marker to show which methods classify which cells as tuned?}}
 \end{figure}
 
 
-\subsection{Deconvolution and spike inference may degrade the ability to recover precisely timed responses}
+\subsection{Spike inference allows recovery of precisely timed responses at the cost of sensitivity}
 %\noindent \emph{\textbf{Results in brief}\\
 %- Experimental manipulations or task events may result in precisely timed (+ brief, small amplitude) responses in L2/3 of cortex\\
 %- Deconvolution/spike inference is often employed to increase the ability to detect such responses/cells, by reducing background noise and removing the slow kinetics of Calcium changes.\\
@@ -334,20 +334,20 @@ Figure \ref{fig:tuned_cells_psth} shows the trial-averaged activity for cells cl
 %}
 
 
-Experimental manipulations or task events often result in precisely timed responses in some neurons. To determine whether deconvolution and spike inference improve the temporal precision of analyses such as tuning curves we computed the touch-triggered average for all cells in the example dataset. In the somatosensory system, touch onset is a salient sensory signal known to drive a subset of neurons to spike with short latency and low jitter \citep{OConnor2010-hd, Hires2015-by}. To determine touch tuning for each cell we found the peak in the touch triggered average, and compared the data distribution (one data point per touch) at this time point to a shuffled data distribution (Benjamini Hochberg corrected Mann-Whitney U test). 
+Experimental manipulations or task events often result in precisely timed responses in some neurons. To determine whether deconvolution and spike inference improve the temporal precision of analyses such as tuning curves we computed the touch-triggered average for all cells in the example dataset. In the somatosensory system, touch onset is a salient sensory signal known to drive a subset of neurons to spike with short latency and low jitter \citep{OConnor2010-hd, Hires2015-by}. To determine touch tuning for each cell we found the peak in the touch triggered average activity (15 imaging frames peri-touch-time), and compared the data distribution (one data point per touch) at this time point to a shuffled data distribution (Benjamini Hochberg corrected Mann-Whitney U test). 
 
-Spike inference or deconvolution is often employed to increase the ability to detect temporally sharp responses by reducing background noise and removing the slow kinetics of Ca\textsuperscript{2+} changes. For clearly tuned cells this approach appears valid - in Fig \ref{fig:touch_triggered} (a) the touch-triggered averages for an example cell show a temporally sharp peak around touch for the spike inference methods. However, as for task tuning, different methods disagree on the number of touch-tuned cells. Fig \ref{fig:touch_triggered} (b) shows the proportion of cells classed as touch-tuned after processing signals with each method. Of particular note, the spike inference methods disagree substantially on this score, with one method (MLSpike) estimating 300\% more touch-tuned cells than another (LZero). Without more analysis it is unclear which - if any - is correct.
+Spike inference or deconvolution is often employed to increase the ability to detect temporally sharp responses by reducing background noise and removing the slow kinetics of Ca\textsuperscript{2+} changes. For clearly tuned cells this approach appears valid - in Fig \ref{fig:touch_triggered} (a) the touch-triggered average for an example cell shows a temporally sharp peak around touch time for the spike inference methods (MLSpike$_{events}$, Suite2P$_{events}$, LZero$_{events}$, purple, green and orange lines respectivey). However, as for task tuning (Fig \ref{fig:tuned_cells_psth}), different methods disagree on the number of touch-tuned cells. Fig \ref{fig:touch_triggered} (b) shows the proportion of cells classed as touch-tuned after processing signals with each method. Of particular note, the spike inference methods disagree substantially on this score, with one method (MLSpike) estimating 4500\% more touch-tuned cells than another (LZero) \emph{i.e. 45 tuned cells vs 1 tuned cell}. 
 
 
-\textbf{TO DO? Comparison of estimates when deconvolving/inferring spikes vs not\\
-\indent - signal to noise \\
-\indent - temporal resolution (rise/decay time)}\\
+% \textbf{TO DO? Comparison of estimates when deconvolving/inferring spikes vs not\\
+% \indent - signal to noise \\
+% \indent - temporal resolution (rise/decay time)}\\
 
 
 
 \begin{figure}
-\includegraphics[width=\textwidth]{full_figs/why_deconvolve_F6_3.png} 
-\caption{\label{fig:touch_triggered} Touch-related responses. (a) Comparing touch-triggered average (mean deconvolved FR per imaging frame) from different deconvolution methods for one example cell. Touch occurs during frame 7 (dotted line). (b) Number of touch tuned cells varies across methods. A cell is classed as touch tuned if peak touch-triggered activity is significantly greater than shuffled data (Mann-Whitney U test, Benjamini Hochberg corrected). Error bars are Jeffreys intervals}
+\includegraphics[width=\textwidth]{full_figs_19v2/why_deconvolve_F6_19v2.png} 
+\caption{\label{fig:touch_triggered} Touch-related responses. (a) Comparing touch-triggered average (mean deconvolved FR per imaging frame) from different deconvolution methods for one example cell. Touch occurs during frame 7 (dotted line). (b) Number of touch-tuned cells varies across methods. A cell is classed as touch-tuned if peak touch-triggered activity is significantly greater than shuffled data (Mann-Whitney U test, Benjamini Hochberg corrected). Error bars are Jeffreys intervals}
 \end{figure}
 
 
@@ -418,16 +418,13 @@ Spike inference or deconvolution is often employed to increase the ability to de
 
 
 
-A goal of many Ca\textsuperscript{2+} imaging experiments is to record from populations of neurons, and then perform clustering or dimensionality reduction. These analyses often rely on estimates of pairwise correlations (CITATION NEEDED). The methods tested in this study are designed to remove noise and sharpen temporal responses, which would lead to more accurate estimates of pairwise correlation. Figure \ref{fig:cxy_dist} (a) and (b) show the distributions of pairwise correlation coefficients computed separately for each method. To aid interpretation of these results we also computed pairwise correlations for five different data surrogates (see methods).
+A goal of many Ca\textsuperscript{2+} imaging experiments is to record from populations of neurons, and then perform clustering or dimensionality reduction. These analyses often rely on estimates of pairwise correlation or covariance \citep{Okun2015-ml,Cunningham2014-vd}. The deconvolution and spike inference methods tested in this study are designed to remove noise, sharpen temporal responses and lead to improved estimates of neural activity, steps which could lead to more accurate estimates of pairwise correlation. Figure \ref{fig:cxy_dist} shows the distributions of pairwise correlation coefficients computed separately for each method. To aid interpretation of these results we also computed pairwise correlations for five different data surrogates (see methods, \emph{Fig in supplement?}).
 
-
-
-\emph{Description}
-Deconvolution/de-noising methods (Yaksi, Suite2P$_{kernel}$, MLSpike$_{kernel}$, LZero$_{kernel}$) have broad distributions more similar to that resulting from smoothing the raw Ca\textsuperscript{2+}. Suite2P$_kernel$ and Peron have median PCCs below zero, suggesting these methods are actively decorrelating the data (choosing parameters that penalise false-positives). Yaksi's distribution is symmetric (like all the noise surrogates) suggesting dirt has been added to the data. LZero$_{kernel}$ resulted in very sparse time series, so the long tail of positive values are likely to be the large group of almost silent cells. Spike inference methods all have sharp peaks just below zero. Not sure why.\\
+Deconvolution/de-noising methods (Yaksi, Suite2P$_{kernel}$, MLSpike$_{kernel}$, LZero$_{kernel}$) have broad distributions similar to that resulting from smoothing the raw Ca\textsuperscript{2+}. Peron has median PCC below zero, suggesting this method is actively decorrelating the data, perhaps due to choosing parameters that penalise false-positive spike detection). Yaksi's distribution is symmetric (like all the noise surrogates) suggesting noise has been added to the data. LZero resulted in very sparse time series, so the long tail of positive correlations in LZero$_{kernel}$ are likely to be the large group of almost silent cells. Spike inference methods all have sharply peaked distributions but medians varying from slightly negative to positive.\\
 
 \emph{Interpretation (SPECULATIVE - DISCUSS WITH MARK):}\\ 
 \indent - Deconvolution/spike inference is always a trade-off between false positives and misses - meaning you get both - resulting in altered pairwise correlations, and their distributions\\
-- Deconvolution/ de-noising, by eliminating photonics shot noise (smoothing the time series), increases the temporal correlations in the data, leading to stronger correlations\\
+- Deconvolution/ de-noising, by eliminating photonic shot noise (smoothing the time series), increases the temporal correlations in the data, leading to stronger correlations\\
 - Choosing analysis parameters that result in firing rate distributions peaked close to zero (reducing false positives) inevitably lead to more miss errors, and therefore actively decorrelate.\\
 \indent - Spike inference is never going to be perfect. Miss real spikes + overestimate background rates (spike inference is additive, so adding background spikes is inevitable. See also \citealt{Ganmor2016-uf} on this point), therefore correlation estimates are noisier (due to false positives/misses ) and biased (due to misses therefore decorrelation, or false positives therefore higher mean correlations)\\
 %\indent - TO DO (?) repeat this analysis but with deconvolved events where available
@@ -443,24 +440,24 @@ Deconvolution/de-noising methods (Yaksi, Suite2P$_{kernel}$, MLSpike$_{kernel}$,
 
 %\newpage
 
+%trim={23 23 10 120}, clip, 
+\begin{figure*}
+\floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=0.3\textwidth}}]{figure}[\FBwidth]
+{\includegraphics[width=0.7\textwidth]{full_figs_19v2/why_deconvolve_F9_19v2.png}}
+{\caption{\label{fig:cxy_dist}Pairwise correlation distributions. (a) Pairwise correlations between all cells (y-axis) following processing with all deconvolution/spike inference methods (x-axis jitter added for clarity). Solid black lines are 5th, 50th and 95th percentiles. (b) Pairwise correlation kernel density functions for continuous (left) and spike inferece (right) methods. Axes are shared between figures.  Horizontal and vertival bars show medians and 5th, 50th and 95th percentiles. (c) Same data as (b) but showing a restricted range of the data. (d) Boxplot version of (a) for clarity}}
+\end{figure*}
 
 Looking in more detail at a subset of 50 cells, Fig \ref{fig:cxy_comparison} (a) shows that the disagreement between methods can be seen at the level of individual pairs of neurons.  Correlations are not just scaled - some pairs that appear correlated following processing by one method (yellow box and arrows) are uncorrelated when processed with another method. Other pairs are consistently correlated across methods (green box and arrows). 
 
+Fig \ref{fig:cxy_comparison} (b) shows the correlation between correlation matrices for the nine different approaches, showing how similar the correlation matrices are across some methods. In Fig \ref{fig:cxy_comparison} (c) the same data is shown but separating the spike inference methods (right) from the others for better comparison. Though there are some exceptions (Fig \ref{fig:cxy_comparison} (a)), overall there is broad agreement within method classes on which cells are more or less correlated. In particular, Calcium, Yaksi and Suite2P$_{kernel}$ are correlated with one another, as are Suite2P$_{events}$ and MLSpike$_{events}$. LZero appears to form unique correlation matrices, correlating only with itself (LZero$_{kernel}$ and LZero$_{events}$ correlate only with one another). Yaksi correlates highly with the raw Ca\textsuperscript{2+}, reflecting the fact that Yaksi changes the time series the least of the pre-processing methods. 
+
+
+
+%trim={10 35 35 5}, clip, 
 \begin{figure*}
 \floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=0.3\textwidth}}]{figure}[\FBwidth]
-{\includegraphics[trim={23 23 10 120}, clip, width=0.7\textwidth]{full_figs/why_deconvolve_F9_2.png}}
-{\caption{\label{fig:cxy_dist}Pairwise correlation distributions. (a) Pairwise correlations between all cells (y-axis) following processing with all deconvolution/spike inference methods (x-axis jitter added for clarity). Solid black lines are 5th, 50th and 95th percentiles. (b) Pairwise correlation kernel density functions for all methods.  Vertical lines are medians and 5th, 50th and 95th percentiles. (c) and (d) as in (a) and (b) for different randomised versions of the data, to aid interpretation of distribution changes in (a) and (b).}}
-\end{figure*}
-
-Fig \ref{fig:cxy_comparison} (b) shows the correlation between correlation matrices for different methods, showing how similar the correlation matrices are across methods. In Fig \ref{fig:cxy_comparison} (c) the same data is shown but separating the spike inference methods (right) from the others for better comparison. Though there are some exceptions (Fig \ref{fig:cxy_comparison} (a)), overall there is broad agreement within method classes on which cells are more or less correlated. In particular, Suite2P$_{kernel}$ and MLSpike$_{kernel}$ are correlated with one another, as are Suite2P$_{events}$ and MLSpike$_{events}$. LZero appears to form unique correlation matrices, correlating only with itself (LZero$_{kernel}$ and LZero$_{events}$ correlate only with one another). Yaksi correlates highly with the raw Ca\textsuperscript{2+}, reflecting the fact that Yaksi changes the time series the least of the pre-processing methods. 
-
-
-
-
-\begin{figure*}
-\floatbox[{\capbeside\thisfloatsetup{capbesideposition={right,top},capbesidewidth=0.3\textwidth}}]{figure}[\FBwidth]
-{\includegraphics[trim={10 35 35 5}, clip, width=0.7\textwidth]{full_figs/why_deconvolve_F8.png}}
-{\caption{\label{fig:cxy_comparison}Pairwise correlations. (a) Example pairwise correlations for 50 cells. Some pairs of cells are consistently correlated across different methods (green arrow and boxes). Other pairs appear correlated when processed with one method but not with others (yellow arrow and boxes). (b) Correlation between pairwise correlation matrices for each method. Some methods result in similar correlation matrices (e.g. Yaksi and Calcium), while others generate distinct correlation matrices (LZero methods). (c) as in (b) but split to show continuous methods (left) or spike inference methods (right). \textbf{add label to c saying 'spike inference' and 'continuous/de-noising'}}}
+{\includegraphics[trim={0 440 0 0},clip,width=0.7\textwidth]{full_figs_19v2/why_deconvolve_F8_19v2.png}}
+{\caption{\label{fig:cxy_comparison}Pairwise correlations. (a) Example pairwise correlations for 50 cells. Some pairs of cells are consistently correlated across different methods (green arrow and boxes). Other pairs appear correlated when processed with one method but not with others (yellow arrow and boxes). (b) Correlation between pairwise correlation matrices for each method. Some methods result in similar correlation matrices (e.g. Yaksi and Calcium), while others generate distinct correlation matrices (LZero methods). (c) as in (b) but split to show continuous methods (left) or spike inference methods (right).}}
 \end{figure*}
 
 
@@ -482,24 +479,24 @@ Dimensionality reduction techniques such as eigendecomposition allow researchers
 
 
 \begin{figure}
-\includegraphics[width=0.9\textwidth]{full_figs/why_deconvolve_F7_2.png}
+\includegraphics[width=0.9\textwidth]{full_figs_19v2/why_deconvolve_F7_19v2.png}
 \caption{\label{fig:dimensionality}Cumulative variance explained by N eigenvectors following Principal Components Analysis. Different spike inference/deconvolution methods result in different estimates of the dimensionality of the data. For example, 80$\%$ of the variance can be explained by 120 or 720 eigenvectors (orthogonal dimensions) depending on the processing method used. \emph{FIX COLOURS: Can't tell which one is the calcium, which the $MLzero_{kernel}$, and which the $LZero_{events}$. Use grey for the raw Ca2+. MDH: To give some idea of how this tunes between “low” and “high” dimensions, replot these “N” as a strip-plot (1D scatter) of the percentage of the population. The N=720 means we can’t describe the data in much less than half the available dimensions = very high dimensional. Whereas the 120 = 10$\%$ of the available dimensions = low dimensional.}}
 \end{figure}
 
 
 
 
-%\clearpage
-\subsection*{Spike inference does not automatically remove experimental artefacts}
-\textbf{MDH: Not sure we're going to include this - perhaps first need to see the proper version of the figure with the dip clearly visible in the deconvolved and inferred spike time-series}
-Apart from improving estimates of neural activity, spike inference is also used to remove artefacts from the data such as slow drifts in fluorescence across experiments, or differences in single-spike fluorescence across cells. In head fixed imaging experiments, licking behaviours can lead to a dip in Ca\textsuperscript{2+} fluorescence (Simon Peron, personal communication. Pachitariu COSYNE poster on correcting drift {\href{https://figshare.com/articles/Drift_correction_for_electrophysiology_and_two-photon_calcium_imaging/5946574}{{\color{blue} FIGSHARE LINK TO POSTER}}}). However, Figure \ref{fig:lick_PSTH} shows that this dip is also present in deconvolved traces (TO DO ADD BETTER FIG).
+% %\clearpage
+% \subsection*{Spike inference does not automatically remove experimental artefacts}
+% \textbf{MDH: Not sure we're going to include this - perhaps first need to see the proper version of the figure with the dip clearly visible in the deconvolved and inferred spike time-series}
+% Apart from improving estimates of neural activity, spike inference is also used to remove artefacts from the data such as slow drifts in fluorescence across experiments, or differences in single-spike fluorescence across cells. In head fixed imaging experiments, licking behaviours can lead to a dip in Ca\textsuperscript{2+} fluorescence (Simon Peron, personal communication. Pachitariu COSYNE poster on correcting drift {\href{https://figshare.com/articles/Drift_correction_for_electrophysiology_and_two-photon_calcium_imaging/5946574}{{\color{blue} FIGSHARE LINK TO POSTER}}}). However, Figure \ref{fig:lick_PSTH} shows that this dip is also present in deconvolved traces (TO DO ADD BETTER FIG).
 
-\begin{figure}[H]
-%\subfigure[]{\includegraphics[width=0.9\textwidth]{psth2_40.png}}
-%\subfigure[]{\includegraphics[width=0.9\textwidth]{psth2_720.png}}
-\includegraphics[width=\textwidth]{psth2_1260.png}
-\caption{\label{fig:lick_PSTH} PLACEHOLDER FIGURE. Lick induced dip in Ca\textsuperscript{2+} fluorescence seen in the raw Calcium is also seen in deconvolved data.}
-\end{figure}
+% \begin{figure}[H]
+% %\subfigure[]{\includegraphics[width=0.9\textwidth]{psth2_40.png}}
+% %\subfigure[]{\includegraphics[width=0.9\textwidth]{psth2_720.png}}
+% \includegraphics[width=\textwidth]{psth2_1260.png}
+% \caption{\label{fig:lick_PSTH} PLACEHOLDER FIGURE. Lick induced dip in Ca\textsuperscript{2+} fluorescence seen in the raw Calcium is also seen in deconvolved data.}
+% \end{figure}
 
 %PSTHs do not show obvious increase in temporal sharpness following deconvolution, but do show signs of missing important features of the data. Each panel shows a different cluster of neurons sorted by t-SNE ordering of PSTHs derived from Calcium data. Pole up is at frame 9, pole down at frame 17, and reward cue is at frame 22. NOTE: Group 3 is aligned to the (likely lick artefact induced) dip in df/f. If this is indeed artifactual, the change in signal still results in a 'rebound' response using Peron (and others, when looking at raw data, figures not shown here)}
 
