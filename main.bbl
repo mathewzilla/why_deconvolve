@@ -1,0 +1,169 @@
+\begin{thebibliography}{22}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Berens et~al.(2018)Berens, Freeman, Deneux, Chenkov, McColgan,
+  Speiser, Macke, Turaga, Mineault, Rupprecht, Gerhard, Friedrich, Friedrich,
+  Paninski, Pachitariu, Harris, Bolte, Machado, Ringach, Stone, Rogerson,
+  Sofroniew, Reimer, Froudarakis, Euler, Rom{\'a}n~Ros{\'o}n, Theis, Tolias,
+  and Bethge]{Berens2018-su}
+Philipp Berens, Jeremy Freeman, Thomas Deneux, Nicolay Chenkov, Thomas
+  McColgan, Artur Speiser, Jakob~H Macke, Srinivas~C Turaga, Patrick Mineault,
+  Peter Rupprecht, Stephan Gerhard, Rainer~W Friedrich, Johannes Friedrich,
+  Liam Paninski, Marius Pachitariu, Kenneth~D Harris, Ben Bolte, Timothy~A
+  Machado, Dario Ringach, Jasmine Stone, Luke~E Rogerson, Nicolas~J Sofroniew,
+  Jacob Reimer, Emmanouil Froudarakis, Thomas Euler, Miroslav
+  Rom{\'a}n~Ros{\'o}n, Lucas Theis, Andreas~S Tolias, and Matthias Bethge.
+\newblock Community-based benchmarking improves spike rate inference from
+  two-photon calcium imaging data.
+\newblock \emph{PLoS Comput. Biol.}, 14\penalty0 (5):\penalty0 e1006157, May
+  2018.
+
+\bibitem[Brown et~al.(2004)Brown, Kass, and Mitra]{Brown2004-tj}
+Emery~N Brown, Robert~E Kass, and Partha~P Mitra.
+\newblock Multiple neural spike train data analysis: state-of-the-art and
+  future challenges.
+\newblock \emph{Nat. Neurosci.}, 7\penalty0 (5):\penalty0 456--461, May 2004.
+
+\bibitem[Chen et~al.(2013)Chen, Wardill, Sun, Pulver, Renninger, Baohan,
+  Schreiter, Kerr, Orger, Jayaraman, Looger, Svoboda, and Kim]{Chen2013-nv}
+Tsai-Wen Chen, Trevor~J Wardill, Yi~Sun, Stefan~R Pulver, Sabine~L Renninger,
+  Amy Baohan, Eric~R Schreiter, Rex~A Kerr, Michael~B Orger, Vivek Jayaraman,
+  Loren~L Looger, Karel Svoboda, and Douglas~S Kim.
+\newblock Ultrasensitive fluorescent proteins for imaging neuronal activity.
+\newblock \emph{Nature}, 499\penalty0 (7458):\penalty0 295--300, July 2013.
+
+\bibitem[Cunningham and Yu(2014)]{Cunningham2014-vd}
+John~P Cunningham and Byron~M Yu.
+\newblock Dimensionality reduction for large-scale neural recordings.
+\newblock \emph{Nat. Neurosci.}, 17\penalty0 (11):\penalty0 1500--1509,
+  November 2014.
+
+\bibitem[Deneux et~al.(2016)Deneux, Kaszas, Szalay, Katona, Lakner, Grinvald,
+  R{\'o}zsa, and Vanzetta]{Deneux2016-gu}
+Thomas Deneux, Attila Kaszas, Gergely Szalay, Gergely Katona, Tam{\'a}s Lakner,
+  Amiram Grinvald, Bal{\'a}zs R{\'o}zsa, and Ivo Vanzetta.
+\newblock Accurate spike estimation from noisy calcium signals for ultrafast
+  three-dimensional imaging of large neuronal populations in vivo.
+\newblock \emph{Nat. Commun.}, 7:\penalty0 12190, July 2016.
+
+\bibitem[Ganmor et~al.(2016)Ganmor, Krumin, Rossi, Carandini, and
+  Simoncelli]{Ganmor2016-uf}
+Elad Ganmor, Michael Krumin, Luigi~F Rossi, Matteo Carandini, and Eero~P
+  Simoncelli.
+\newblock Direct estimation of firing rates from calcium imaging data.
+\newblock January 2016.
+
+\bibitem[Harris et~al.(2016)Harris, Quiroga, Freeman, and Smith]{Harris2016-zo}
+Kenneth~D Harris, Rodrigo~Quian Quiroga, Jeremy Freeman, and Spencer~L Smith.
+\newblock Improving data quality in neuronal population recordings.
+\newblock \emph{Nat. Neurosci.}, 19\penalty0 (9):\penalty0 1165--1174, August
+  2016.
+
+\bibitem[Hires et~al.(2015)Hires, Gutnisky, Yu, O'Connor, and
+  Svoboda]{Hires2015-by}
+Samuel~Andrew Hires, Diego~A Gutnisky, Jianing Yu, Daniel~H O'Connor, and Karel
+  Svoboda.
+\newblock Low-noise encoding of active touch by layer 4 in the somatosensory
+  cortex.
+\newblock \emph{Elife}, 4, August 2015.
+
+\bibitem[Jewell and Witten(2017)]{Jewell2017-pr}
+Sean Jewell and Daniela Witten.
+\newblock Exact spike train inference via $\ell_0$ optimization.
+\newblock March 2017.
+
+\bibitem[L{\"u}tcke et~al.(2013)L{\"u}tcke, Gerhard, Zenke, Gerstner, and
+  Helmchen]{Lutcke2013-wu}
+Henry L{\"u}tcke, Felipe Gerhard, Friedemann Zenke, Wulfram Gerstner, and
+  Fritjof Helmchen.
+\newblock Inference of neuronal network spike dynamics and topology from
+  calcium imaging data.
+\newblock \emph{Front. Neural Circuits}, 7:\penalty0 201, December 2013.
+
+\bibitem[O'Connor et~al.(2010)O'Connor, Peron, Huber, and
+  Svoboda]{OConnor2010-hd}
+Daniel~H O'Connor, Simon~P Peron, Daniel Huber, and Karel Svoboda.
+\newblock Neural activity in barrel cortex underlying vibrissa-based object
+  localization in mice.
+\newblock \emph{Neuron}, 67\penalty0 (6):\penalty0 1048--1061, September 2010.
+
+\bibitem[Okun et~al.(2015)Okun, Steinmetz, Cossell, Iacaruso, Ko, Barth{\'o},
+  Moore, Hofer, Mrsic-Flogel, Carandini, and Harris]{Okun2015-ml}
+Michael Okun, Nicholas~A Steinmetz, Lee Cossell, M~Florencia Iacaruso, Ho~Ko,
+  P{\'e}ter Barth{\'o}, Tirin Moore, Sonja~B Hofer, Thomas~D Mrsic-Flogel,
+  Matteo Carandini, and Kenneth~D Harris.
+\newblock Diverse coupling of neurons to populations in sensory cortex.
+\newblock \emph{Nature}, 521\penalty0 (7553):\penalty0 511--515, May 2015.
+
+\bibitem[Pachitariu et~al.()Pachitariu, Stringer, Schr{\"o}der, Dipoppa,
+  Federico~Rossi, Carandini, and Harris]{Pachitariu_undated-ui}
+Marius Pachitariu, Carsen Stringer, Sylvia Schr{\"o}der, Mario Dipoppa,
+  L~Federico~Rossi, Matteo Carandini, and Kenneth~D Harris.
+\newblock Suite2p: beyond 10, 000 neurons with standard two-photon microscopy.
+
+\bibitem[Paiva et~al.(2010)Paiva, Park, and Pr{\'\i}ncipe]{Paiva2010-qv}
+Ant{\'o}nio R~C Paiva, Il~Park, and Jos{\'e}~C Pr{\'\i}ncipe.
+\newblock A comparison of binless spike train measures.
+\newblock \emph{Neural Comput. Appl.}, 19\penalty0 (3):\penalty0 405--419,
+  April 2010.
+
+\bibitem[Peron et~al.(2015{\natexlab{a}})Peron, Chen, and
+  Svoboda]{Peron2015-qz}
+Simon Peron, Tsai-Wen Chen, and Karel Svoboda.
+\newblock Comprehensive imaging of cortical networks.
+\newblock \emph{Curr. Opin. Neurobiol.}, 32:\penalty0 115--123, June
+  2015{\natexlab{a}}.
+
+\bibitem[Peron et~al.(2015{\natexlab{b}})Peron, Freeman, Iyer, Guo, and
+  Svoboda]{Peron2015-kd}
+Simon~P Peron, Jeremy Freeman, Vijay Iyer, Caiying Guo, and Karel Svoboda.
+\newblock A cellular resolution map of barrel cortex activity during tactile
+  behavior.
+\newblock \emph{Neuron}, 86\penalty0 (3):\penalty0 783--799, May
+  2015{\natexlab{b}}.
+
+\bibitem[Reynolds et~al.(2017)Reynolds, Schultz, and Dragotti]{Reynolds2017-dr}
+Stephanie Reynolds, Simon~R Schultz, and Pier~Luigi Dragotti.
+\newblock {CosMIC}: A consistent metric for spike inference from calcium
+  imaging.
+\newblock December 2017.
+
+\bibitem[Svoboda(2015)]{Svoboda2015-ym}
+K~Svoboda.
+\newblock Simultaneous imaging and loose-seal cell-attached electrical
+  recordings from neurons expressing a variety of genetically encoded calcium
+  indicators.
+\newblock \emph{GENIE project, Janelia Farm Campus, HHMI; CRCNS.org}, 2015.
+
+\bibitem[Theis et~al.(2016)Theis, Berens, Froudarakis, Reimer,
+  Rom{\'a}n~Ros{\'o}n, Baden, Euler, Tolias, and Bethge]{Theis2016-ee}
+Lucas Theis, Philipp Berens, Emmanouil Froudarakis, Jacob Reimer, Miroslav
+  Rom{\'a}n~Ros{\'o}n, Tom Baden, Thomas Euler, Andreas~S Tolias, and Matthias
+  Bethge.
+\newblock Benchmarking spike rate inference in population calcium imaging.
+\newblock \emph{Neuron}, 90\penalty0 (3):\penalty0 471--482, May 2016.
+
+\bibitem[Victor and Purpura(1996)]{Victor1996-cg}
+J~D Victor and K~P Purpura.
+\newblock Nature and precision of temporal coding in visual cortex: a
+  metric-space analysis.
+\newblock \emph{J. Neurophysiol.}, 76\penalty0 (2):\penalty0 1310--1326, August
+  1996.
+
+\bibitem[Wohrer et~al.(2013)Wohrer, Humphries, and Machens]{Wohrer2013-rp}
+Adrien Wohrer, Mark~D Humphries, and Christian~K Machens.
+\newblock Population-wide distributions of neural activity during perceptual
+  decision-making.
+\newblock \emph{Prog. Neurobiol.}, 103:\penalty0 156--193, April 2013.
+
+\bibitem[Yaksi and Friedrich(2006)]{Yaksi2006-ic}
+Emre Yaksi and Rainer~W Friedrich.
+\newblock Reconstruction of firing rate changes across neuronal populations by
+  temporally deconvolved ca2+ imaging.
+\newblock \emph{Nat. Methods}, 3\penalty0 (5):\penalty0 377--383, May 2006.
+
+\end{thebibliography}
