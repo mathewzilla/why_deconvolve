@@ -1,9 +1,17 @@
 # Fdb version 3
-["pdflatex"] 1550245474 "/home/mathew/work/why_deconvolve/main.tex" "/home/mathew/work/why_deconvolve/main.pdf" "main" 1550245484
+["bibtex main"] 1550761897 "main.aux" "main.bbl" "main" 1550762126
+  "/usr/share/texlive/texmf-dist/bibtex/bst/natbib/plainnat.bst" 1233624470 26816 ffe5423d2019860bad9f54bc402fac15 ""
+  "main.aux" 1550762125 26604 45d873094e3c3646b918e84401b47347 ""
+  "main.bcf" 0 -1 0 ""
+  "references.bib" 1550245405 42601 effb179997c0f028a3086c02b0282557 ""
+  (generated)
+  "main.blg"
+  "main.bbl"
+["pdflatex"] 1550762117 "/home/mathew/work/why_deconvolve/main.tex" "/home/mathew/work/why_deconvolve/main.pdf" "main" 1550762126
   "/etc/texmf/web2c/texmf.cnf" 1548074468 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/mathew/.texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk" 1548080020 20008 5e0ef2b5b109440593fa1fdeb6a4ac84 ""
-  "/home/mathew/work/why_deconvolve/main.aux" 1550245484 24223 399ca6b3f2bc2b582a333a37f89eefa3 ""
-  "/home/mathew/work/why_deconvolve/main.tex" 1550245464 79748 4a24a95df2c52fd30c910e552d91f249 ""
+  "/home/mathew/work/why_deconvolve/main.aux" 1550762125 26604 45d873094e3c3646b918e84401b47347 ""
+  "/home/mathew/work/why_deconvolve/main.tex" 1550762117 80076 426624cd6b32a383ce8f02d2841f8baf ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/helvetic/phvb8r.tfm" 1136768653 4484 b828043cbd581d289d955903c1339981 ""
@@ -185,13 +193,14 @@
   "full_figs_19v2/why_deconvolve_F7_19v2.png" 1550157540 138396 9ffc73b8fd64e03bd471068d4e4ca5d0 ""
   "full_figs_19v2/why_deconvolve_F8_19v2.png" 1550157540 723736 357810da50fba7d76a7b20c27096c3e1 ""
   "full_figs_19v2/why_deconvolve_F9_19v2.png" 1550157540 1457451 f8459960fa3596471e23d0bb4cf60607 ""
-  "main.aux" 1550245484 24223 399ca6b3f2bc2b582a333a37f89eefa3 ""
-  "main.out" 1550245484 1455 934108bc8f8aeb05fa96f1c7d0b9b22d ""
-  "main.tex" 1550245464 79748 4a24a95df2c52fd30c910e552d91f249 ""
+  "main.aux" 1550762125 26604 45d873094e3c3646b918e84401b47347 ""
+  "main.bbl" 1550761897 8167 88a1d133751973746050314428ba6f71 "bibtex main"
+  "main.out" 1550762125 1455 934108bc8f8aeb05fa96f1c7d0b9b22d ""
+  "main.tex" 1550762117 80076 426624cd6b32a383ce8f02d2841f8baf ""
   (generated)
+  "main.out"
   "main.aux"
   "main.log"
   "/home/mathew/work/why_deconvolve/main.log"
-  "/home/mathew/work/why_deconvolve/main.pdf"
-  "main.out"
   "main.pdf"
+  "/home/mathew/work/why_deconvolve/main.pdf"
