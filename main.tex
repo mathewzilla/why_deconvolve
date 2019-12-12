@@ -226,19 +226,21 @@ Together, these results show that modern spike-inference methods can accurately 
 %- methods (within and between 'class' i.e. deconvolution vs spike inference) disagree on event rate of cells
 %- some methods are qualitatively wrong, others have quantitative disagreement\\
 %}
+
 \begin{figure}[h!]
-\includegraphics[width=0.9\textwidth]{full_figs/why_deconvolve_F2.png}
-\caption{\label{fig:peron_setup} \citep{Peron2015-qz} experimental design. TO DO EXPAND description once final figure arrangement is decided 
-\emph{MDH: Again, we need to think about how to remove or replace these figure panels for publication.
-We don’t need  the bottom rows of A-F here for example. For our purposes, we only care that there is a single recording of many neurons during a task.
-So versions of the bottom row G and H from the actual session we use would be good for the final version.
-We can redraw the top row A and C; 
-For the parameters in top panel B, as far as I know these aren’t used here (just “touch”), so an be eliminated too. If we need them, then the redrawn A panel can have the angle and curvature parameters from B}}
+        \includegraphics[width=0.9\textwidth]{full_figs/why_deconvolve_F2.png}
+        \caption{\label{fig:peron_setup} \citep{Peron2015-qz} experimental design. TO DO EXPAND description once final figure arrangement is decided 
+        \emph{MDH: Again, we need to think about how to remove or replace these figure panels for publication.
+        We don’t need  the bottom rows of A-F here for example. For our purposes, we only care that there is a single recording of many neurons during a task.
+        So versions of the bottom row G and H from the actual session we use would be good for the final version.
+        We can redraw the top row A and C; 
+        For the parameters in top panel B, as far as I know these aren’t used here (just “touch”), so an be eliminated too. If we need them, then the redrawn A panel can have the angle and curvature parameters from B}}
 \end{figure}
 
 We have shown that different spike inference methods can recover good estimates of neural activity if parameters are set appropriately. However, it is not possible to fit parameters to representative ground truth data for most experiments. On a real-world example, does spike inference result in good estimates of neural activity, and how do these estimates compare to simple deconvolution or de-noising processes? 
 
-To determine the effect of analysis method and parameter choice on simple measures of neuron activity in the absence of ground truth, we compared the results of analysis of df/f Ca\textsuperscript{2+}  from a single experiment from \citealt{Peron2015-qz} (see Figure \ref{fig:peron_setup}) to eight different approaches for deconvolution, de-noising and spike inference. We compared the three spike inference methods tested in Section \ref{GT} - Suite2P, MLSpike and LZero - to a kernel-convolved version of the returned spikes (i.e. denoised df/f); de-noised Ca\textsuperscript{2+} as reported in the original \citet{Peron2015-qz} study; and the simple deconvolution approach of \citet{Yaksi2006-ic} (see Methods for implementation details).
+To determine the effect of analysis method and parameter choice on simple measures of neuron activity in the absence of ground truth, we compared the results of analysis of df/f Ca\textsuperscript{2+}  from a single experiment from \citealt{Peron2015-qz} (see Figure \ref{fig:peron_setup}) to eight different approaches for deconvolution, de-noising and spike inference. We compared the three spike inference methods tested in Section \ref{GT} - Suite2P, MLSpike and LZero - to a decaying exponential kernel-convolved version of the returned spikes (i.e. denoised df/f); de-noised Ca\textsuperscript{2+} as reported in the original \citet{Peron2015-qz} study; and the simple deconvolution approach of \citet{Yaksi2006-ic} (see Methods for implementation details). For each spike inference method the modal best parameters, as determined using Error Rate on downsampled data ground truth data (as in Figures \ref{fig:GT_data_ds},\ref{fig:GT_data_params}), were then fixed for the population imaging data analysis.
+
 
 %\emph{We’ll need to explain the collection of algorithms here, including why we’re expanding from the original 3. (Spike inference vs plain deconvolution to understand if we gain anything; and compare all to raw Ca2+)}
 
