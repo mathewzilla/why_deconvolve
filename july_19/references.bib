@@ -1,0 +1,1575 @@
+@ARTICLE{Ganmor2016-uf,
+  title         = "Direct Estimation of Firing Rates from Calcium Imaging Data",
+  author        = "Ganmor, Elad and Krumin, Michael and Rossi, Luigi F and
+                   Carandini, Matteo and Simoncelli, Eero P",
+  abstract      = "Two-photon imaging of calcium indicators allows simultaneous
+                   recording of responses of hundreds of neurons over hours and
+                   even days, but provides a relatively indirect measure of
+                   their spiking activity. Existing deconvolution algorithms
+                   attempt to recover spikes from observed imaging data, which
+                   are then commonly subjected to the same analyses that are
+                   applied to electrophysiologically recorded spikes (e.g.,
+                   estimation of average firing rates, or tuning curves). Here
+                   we show, however, that in the presence of noise this
+                   approach is often heavily biased. We propose an alternative
+                   analysis that aims to estimate the underlying rate directly,
+                   by integrating over the unobserved spikes instead of
+                   committing to a single estimate of the spike train. This
+                   approach can be used to estimate average firing rates or
+                   tuning curves directly from the imaging data, and is
+                   sufficiently flexible to incorporate prior knowledge about
+                   tuning structure. We show that directly estimated rates are
+                   more accurate than those obtained from averaging of spikes
+                   estimated through deconvolution, both on simulated data and
+                   on imaging data acquired in mouse visual cortex.",
+  month         =  jan,
+  year          =  2016,
+  archivePrefix = "arXiv",
+  primaryClass  = "q-bio.NC",
+  eprint        = "1601.00364"
+}
+
+@ARTICLE{Wohrer2013-rp,
+  title     = "Population-wide distributions of neural activity during
+               perceptual decision-making",
+  author    = "Wohrer, Adrien and Humphries, Mark D and Machens, Christian K",
+  abstract  = "Cortical activity involves large populations of neurons, even
+               when it is limited to functionally coherent areas.
+               Electrophysiological recordings, on the other hand, involve
+               comparatively small neural ensembles, even when modern-day
+               techniques are used. Here we review results which have started
+               to fill the gap between these two scales of inquiry, by shedding
+               light on the statistical distributions of activity in large
+               populations of cells. We put our main focus on data recorded in
+               awake animals that perform simple decision-making tasks and
+               consider statistical distributions of activity throughout
+               cortex, across sensory, associative, and motor areas. We
+               transversally review the complexity of these distributions, from
+               distributions of firing rates and metrics of spike-train
+               structure, through distributions of tuning to stimuli or actions
+               and of choice signals, and finally the dynamical evolution of
+               neural population activity and the distributions of (pairwise)
+               neural interactions. This approach reveals shared patterns of
+               statistical organization across cortex, including: (i)
+               long-tailed distributions of activity, where quasi-silence seems
+               to be the rule for a majority of neurons; that are barely
+               distinguishable between spontaneous and active states; (ii)
+               distributions of tuning parameters for sensory (and motor)
+               variables, which show an extensive extrapolation and
+               fragmentation of their representations in the periphery; and
+               (iii) population-wide dynamics that reveal rotations of internal
+               representations over time, whose traces can be found both in
+               stimulus-driven and internally generated activity. We discuss
+               how these insights are leading us away from the notion of
+               discrete classes of cells, and are acting as powerful
+               constraints on theories and models of cortical organization and
+               population coding.",
+  journal   = "Prog. Neurobiol.",
+  publisher = "Elsevier",
+  volume    =  103,
+  pages     = "156--193",
+  month     =  apr,
+  year      =  2013,
+  language  = "en"
+}
+
+
+@ARTICLE{Pachitariu2016-ui,
+  title   = "Suite2p: beyond 10, 000 neurons with standard two-photon
+             microscopy",
+  author  = "Pachitariu, Marius and Stringer, Carsen and Schr{\"o}der, Sylvia
+             and Dipoppa, Mario and Federico Rossi, L and Carandini, Matteo and
+             Harris, Kenneth D",
+  journal = "BioRxiv",
+  volume  = "Preprint at http://dx.doi.org/10.1101/061507",
+  year    =  2016
+}
+
+
+@ARTICLE{Reynolds2018-yh,
+  title    = "{CosMIC}: A Consistent Metric for Spike Inference from Calcium
+              Imaging",
+  author   = "Reynolds, Stephanie and Abrahamsson, Therese and
+              Sj{\"o}str{\"o}m, Per Jesper and Schultz, Simon R and Dragotti,
+              Pier Luigi",
+  abstract = "In recent years, the development of algorithms to detect neuronal
+              spiking activity from two-photon calcium imaging data has
+              received much attention, yet few researchers have examined the
+              metrics used to assess the similarity of detected spike trains
+              with the ground truth. We highlight the limitations of the two
+              most commonly used metrics, the spike train correlation and
+              success rate, and propose an alternative, which we refer to as
+              CosMIC. Rather than operating on the true and estimated spike
+              trains directly, the proposed metric assesses the similarity of
+              the pulse trains obtained from convolution of the spike trains
+              with a smoothing pulse. The pulse width, which is derived from
+              the statistics of the imaging data, reflects the temporal
+              tolerance of the metric. The final metric score is the size of
+              the commonalities of the pulse trains as a fraction of their
+              average size. Viewed through the lens of set theory, CosMIC
+              resembles a continuous S{\o}rensen-Dice coefficient-an index
+              commonly used to assess the similarity of discrete,
+              presence/absence data. We demonstrate the ability of the proposed
+              metric to discriminate the precision and recall of spike train
+              estimates. Unlike the spike train correlation, which appears to
+              reward overestimation, the proposed metric score is maximized
+              when the correct number of spikes have been detected.
+              Furthermore, we show that CosMIC is more sensitive to the
+              temporal precision of estimates than the success rate.",
+  journal  = "Neural Comput.",
+  volume   =  30,
+  number   =  10,
+  pages    = "2726--2756",
+  month    =  oct,
+  year     =  2018,
+  language = "en"
+}
+
+
+
+@ARTICLE{Deneux2016-gu,
+  title    = "Accurate spike estimation from noisy calcium signals for
+              ultrafast three-dimensional imaging of large neuronal populations
+              in vivo",
+  author   = "Deneux, Thomas and Kaszas, Attila and Szalay, Gergely and Katona,
+              Gergely and Lakner, Tam{\'a}s and Grinvald, Amiram and R{\'o}zsa,
+              Bal{\'a}zs and Vanzetta, Ivo",
+  abstract = "Extracting neuronal spiking activity from large-scale two-photon
+              recordings remains challenging, especially in mammals in vivo,
+              where large noises often contaminate the signals. We propose a
+              method, MLspike, which returns the most likely spike train
+              underlying the measured calcium fluorescence. It relies on a
+              physiological model including baseline fluctuations and distinct
+              nonlinearities for synthetic and genetically encoded indicators.
+              Model parameters can be either provided by the user or estimated
+              from the data themselves. MLspike is computationally efficient
+              thanks to its original discretization of probability
+              representations; moreover, it can also return spike probabilities
+              or samples. Benchmarked on extensive simulations and real data
+              from seven different preparations, it outperformed
+              state-of-the-art algorithms. Combined with the finding obtained
+              from systematic data investigation (noise level, spiking rate and
+              so on) that photonic noise is not necessarily the main limiting
+              factor, our method allows spike extraction from large-scale
+              recordings, as demonstrated on acousto-optical three-dimensional
+              recordings of over 1,000 neurons in vivo.",
+  journal  = "Nat. Commun.",
+  volume   =  7,
+  pages    = "12190",
+  month    =  jul,
+  year     =  2016,
+  language = "en"
+}
+
+@ARTICLE{Yaksi2006-ic,
+  title    = "Reconstruction of firing rate changes across neuronal populations
+              by temporally deconvolved Ca2+ imaging",
+  author   = "Yaksi, Emre and Friedrich, Rainer W",
+  abstract = "Methods to record action potential (AP) firing in many individual
+              neurons are essential to unravel the function of complex neuronal
+              circuits in the brain. A promising approach is bolus loading of
+              Ca(2+) indicators combined with multiphoton microscopy.
+              Currently, however, this technique lacks cell-type specificity,
+              has low temporal resolution and cannot resolve complex temporal
+              firing patterns. Here we present simple solutions to these
+              problems. We identified neuron types by colocalizing Ca(2+)
+              signals of a red-fluorescing indicator with genetically encoded
+              markers. We reconstructed firing rate changes from Ca(2+) signals
+              by temporal deconvolution. This technique is efficient,
+              dramatically enhances temporal resolution, facilitates data
+              interpretation and permits analysis of odor-response patterns
+              across thousands of neurons in the zebrafish olfactory bulb.
+              Hence, temporally deconvolved Ca(2+) imaging (TDCa imaging)
+              resolves limitations of current optical recording techniques and
+              is likely to be widely applicable because of its simplicity,
+              robustness and generic principle.",
+  journal  = "Nat. Methods",
+  volume   =  3,
+  number   =  5,
+  pages    = "377--383",
+  month    =  may,
+  year     =  2006,
+  language = "en"
+}
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@ARTICLE{Pachitariu2018-cj,
+  title    = "Robustness of spike deconvolution for neuronal calcium imaging",
+  author   = "Pachitariu, Marius and Stringer, Carsen and Harris, Kenneth D",
+  abstract = "Calcium imaging is a powerful method to record the activity of
+              neural populations in many species, but inferring spike times
+              from calcium signals is a challenging problem. We compared
+              multiple approaches using multiple datasets with ground truth
+              electrophysiology, and found that simple non-negative
+              deconvolution (NND) outperformed all other algorithms on
+              out-of-sample test data. We introduce a novel benchmark
+              applicable to recordings without electrophysiological ground
+              truth, based on the correlation of responses to two stimulus
+              repeats, and used this to show that unconstrained NND also
+              outperformed the other algorithms when run on ``zoomed out''
+              datasets of ∼10,000 cell recordings from the visual cortex of
+              mice of either sex. Finally, we show that NND-based methods match
+              the performance of a supervised method based on convolutional
+              neural networks, while avoiding some of the biases of such
+              methods, and at much faster running times. We therefore recommend
+              that spikes be inferred from calcium traces using simple NND, due
+              to its simplicity, efficiency and accuracy.SIGNIFICANCE
+              STATEMENTThe experimental method that currently allows for
+              recordings of the largest numbers of cells simultaneously is
+              two-photon calcium imaging. However, use of this powerful method
+              requires that neuronal firing times be inferred correctly from
+              the large resulting datasets. Previous studies have claimed that
+              complex supervised learning algorithms outperform simple
+              deconvolution methods at this task. Unfortunately, these studies
+              suffered from several problems and biases. When we repeated the
+              analysis, using the same data and correcting these problems, we
+              found that simpler spike inference methods perform better. Even
+              more importantly, we found that supervised learning methods can
+              introduce artifactual structure into spike trains, that can in
+              turn lead to erroneous scientific conclusions. Of the algorithms
+              we evaluated, we found that an extremely simple method performed
+              best in all circumstances tested, was much faster to run, and was
+              insensitive to parameter choices, making incorrect scientific
+              conclusions much less likely.",
+  journal  = "J. Neurosci.",
+  month    =  aug,
+  year     =  2018,
+  language = "en"
+}
+
+@ARTICLE{Jewell2017-pr,
+  title         = "Exact Spike Train Inference Via $\ell_0$ Optimization",
+  author        = "Jewell, Sean and Witten, Daniela",
+  abstract      = "In recent years, new technologies in neuroscience have made
+                   it possible to measure the activities of large numbers of
+                   neurons in behaving animals. For each neuron, a fluorescence
+                   trace is measured; this can be seen as a first-order
+                   approximation of the neuron's activity over time.
+                   Determining the exact time at which a neuron spikes on the
+                   basis of its fluorescence trace is an important open problem
+                   in the field of computational neuroscience. Recently, a
+                   convex optimization problem involving an $\ell_1$ penalty
+                   was proposed for this task. In this paper, we slightly
+                   modify that recent proposal by replacing the $\ell_1$
+                   penalty with an $\ell_0$ penalty. In stark contrast to the
+                   conventional wisdom that $\ell_0$ optimization problems are
+                   computationally intractable, we show that the resulting
+                   optimization problem can be efficiently solved for the
+                   global optimum using an extremely simple and efficient
+                   dynamic programming algorithm. Our R-language implementation
+                   of the proposed algorithm runs in a few minutes on
+                   fluorescence traces of $100,000$ timesteps. Furthermore, our
+                   proposal leads to substantially better results than the
+                   previous $\ell_1$ proposal, on synthetic data as well as on
+                   two calcium imaging data sets. R-language software for our
+                   proposal is now available at
+                   https://github.com/jewellsean/LZeroSpikeInference and will
+                   be available soon on CRAN in the package
+                   LZeroSpikeInference.",
+  month         =  mar,
+  year          =  2017,
+  archivePrefix = "arXiv",
+  primaryClass  = "stat.AP",
+  eprint        = "1703.08644"
+}
+
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@ARTICLE{Jewell2018-cx,
+  title    =  "Exact Spike Train Inference Via $\ell_0$ Optimization",
+  author   = "Jewell, Sean and Witten, Daniela",
+  abstract = "In recent years new technologies in neuroscience have made it
+              possible to measure the activities of large numbers of neurons
+              simultaneously in behaving animals. For each neuron a
+              fluorescence trace is measured; this can be seen as a first-order
+              approximation of the neuron's activity over time. Determining the
+              exact time at which a neuron spikes on the basis of its
+              fluorescence trace is an important open problem in the field of
+              computational neuroscience. Recently, a convex optimization
+              problem involving an ℓ1 penalty was proposed for this task. In
+              this paper we slightly modify that recent proposal by replacing
+              the ℓ1 penalty with an ℓ0 penalty. In stark contrast to the
+              conventional wisdom that ℓ0 optimization problems are
+              computationally intractable, we show that the resulting
+              optimization problem can be efficiently solved for the global
+              optimum using an extremely simple and efficient dynamic
+              programming algorithm. Our R-language implementation of the
+              proposed algorithm runs in a few minutes on fluorescence traces
+              of 100,000 timesteps. Furthermore, our proposal leads to
+              substantial improvements over the previous ℓ1 proposal, in
+              simulations as well as on two calcium imaging datasets.
+              R-language software for our proposal is available on CRAN in the
+              package LZeroSpikeInference. Instructions for running this
+              software in python can be found at
+              https://github.com/jewellsean/LZeroSpikeInference.",
+  journal  = "Ann. Appl. Stat.",
+  volume   =  12,
+  number   =  4,
+  pages    = "2457--2482",
+  month    =  dec,
+  year     =  2018,
+  keywords = "Neuroscience; calcium imaging; changepoint detection; dynamic
+              programming",
+  language = "en"
+}
+
+
+@ARTICLE{Victor1996-cg,
+  title     = "Nature and precision of temporal coding in visual cortex: a
+               metric-space analysis",
+  author    = "Victor, J D and Purpura, K P",
+  abstract  = "1. We recorded single-unit and multi-unit activity in response
+               to transient presentation of texture and grating patterns at 25
+               sites within the parafoveal representation of V1, V2, and V3 of
+               two awake monkeys trained to perform a fixation task. In grating
+               experiments, stimuli varied in orientation, spatial frequency,
+               or both. In texture experiments, stimuli varied in contrast,
+               check size, texture type, or pairs of these attributes. 2. To
+               examine the nature and precision of temporal coding, we compared
+               individual responses elicited by each set of stimuli in terms of
+               two families of metrics. One family of metrics, D(spike), was
+               sensitive to the absolute spike time (following stimulus onset).
+               The second family of metrics, D(interval), was sensitive to the
+               pattern of interspike intervals. In each family, the metrics
+               depend on a parameter q, which expresses the precision of
+               temporal coding. For q = 0, both metrics collapse into the
+               ``spike count'' metric D(Count), which is sensitive to the
+               number of impulses but insensitive to their position in time. 3.
+               Each of these metrics, with values of q ranging from 0 to 512/s,
+               was used to calculate the distance between all pairs of spike
+               trains within each dataset. The extent of stimulus-specific
+               clustering manifest in these pairwise distances was quantified
+               by an information measure. Chance clustering was estimated by
+               applying the same procedure to synthetic data sets in which
+               responses were assigned randomly to the input stimuli. 4. Of the
+               352 data sets, 170 showed evidence of tuning via the spike count
+               (q = 0) metric, 294 showed evidence of tuning via the spike time
+               metric, 272 showed evidence of tuning via the spike interval
+               metric to the stimulus attribute (contrast, check size,
+               orientation, spatial frequency, or texture type) under study.
+               Across the entire dataset, the information not attributable to
+               chance clustering averaged 0.042 bits for the spike count
+               metric, 0.171 bits for the optimal spike time metric, and 0.107
+               bits for the optimal spike interval metric. 5. The reciprocal of
+               the optimal cost q serves as a measure of the temporal precision
+               of temporal coding. In V1 and V2, with both metrics, temporal
+               precision was highest for contrast (ca. 10-30 ms) and lowest for
+               texture type (ca. 100 ms). This systematic dependence of q on
+               stimulus attribute provides a possible mechanism for the
+               simultaneous representation of multiple stimulus attributes in
+               one spike train. 6. Our findings are inconsistent with Poisson
+               models of spike trains. Synthetic data sets in which firing rate
+               was governed by a time-dependent Poisson process matched to the
+               observed poststimulus time histogram (PSTH) overestimated
+               clustering induced by D(count) and, for low values of q,
+               D(spike)[q] and D(intervals)[q]. Synthetic data sets constructed
+               from a modified Poisson process, which preserved not only the
+               PSTH but also spike count statistics accounted for the
+               clustering induced by D(count) but underestimated the clustering
+               induced by D(spike)[q] and D(interval)[q].",
+  journal   = "J. Neurophysiol.",
+  publisher = "Am Physiological Soc",
+  volume    =  76,
+  number    =  2,
+  pages     = "1310--1326",
+  month     =  aug,
+  year      =  1996,
+  language  = "en"
+}
+
+
+@ARTICLE{Theis2016-ee,
+  title     = "Benchmarking Spike Rate Inference in Population Calcium Imaging",
+  author    = "Theis, Lucas and Berens, Philipp and Froudarakis, Emmanouil and
+               Reimer, Jacob and Rom{\'a}n Ros{\'o}n, Miroslav and Baden, Tom
+               and Euler, Thomas and Tolias, Andreas S and Bethge, Matthias",
+  abstract  = "A fundamental challenge in calcium imaging has been to infer
+               spike rates of neurons from the measured noisy fluorescence
+               traces. We systematically evaluate different spike inference
+               algorithms on a large benchmark dataset (>100,000 spikes)
+               recorded from varying neural tissue (V1 and retina) using
+               different calcium indicators (OGB-1 and GCaMP6). In addition, we
+               introduce a new algorithm based on supervised learning in
+               flexible probabilistic models and find that it performs better
+               than other published techniques. Importantly, it outperforms
+               other algorithms even when applied to entirely new datasets for
+               which no simultaneously recorded data is available. Future data
+               acquired in new experimental conditions can be used to further
+               improve the spike prediction accuracy and generalization
+               performance of the model. Finally, we show that comparing
+               algorithms on artificial data is not informative about
+               performance on real data, suggesting that benchmarking different
+               methods with real-world datasets may greatly facilitate future
+               algorithmic developments in neuroscience.",
+  journal   = "Neuron",
+  publisher = "Elsevier Inc.",
+  volume    =  90,
+  number    =  3,
+  pages     = "471--482",
+  month     =  may,
+  year      =  2016,
+  language  = "en"
+}
+
+@ARTICLE{Berens2018-su,
+  title    = "Community-based benchmarking improves spike rate inference from
+              two-photon calcium imaging data",
+  author   = "Berens, Philipp and Freeman, Jeremy and Deneux, Thomas and
+              Chenkov, Nicolay and McColgan, Thomas and Speiser, Artur and
+              Macke, Jakob H and Turaga, Srinivas C and Mineault, Patrick and
+              Rupprecht, Peter and Gerhard, Stephan and Friedrich, Rainer W and
+              Friedrich, Johannes and Paninski, Liam and Pachitariu, Marius and
+              Harris, Kenneth D and Bolte, Ben and Machado, Timothy A and
+              Ringach, Dario and Stone, Jasmine and Rogerson, Luke E and
+              Sofroniew, Nicolas J and Reimer, Jacob and Froudarakis, Emmanouil
+              and Euler, Thomas and Rom{\'a}n Ros{\'o}n, Miroslav and Theis,
+              Lucas and Tolias, Andreas S and Bethge, Matthias",
+  abstract = "In recent years, two-photon calcium imaging has become a standard
+              tool to probe the function of neural circuits and to study
+              computations in neuronal populations. However, the acquired
+              signal is only an indirect measurement of neural activity due to
+              the comparatively slow dynamics of fluorescent calcium
+              indicators. Different algorithms for estimating spike rates from
+              noisy calcium measurements have been proposed in the past, but it
+              is an open question how far performance can be improved. Here, we
+              report the results of the spikefinder challenge, launched to
+              catalyze the development of new spike rate inference algorithms
+              through crowd-sourcing. We present ten of the submitted
+              algorithms which show improved performance compared to previously
+              evaluated methods. Interestingly, the top-performing algorithms
+              are based on a wide range of principles from deep neural networks
+              to generative models, yet provide highly correlated estimates of
+              the neural activity. The competition shows that benchmark
+              challenges can drive algorithmic developments in neuroscience.",
+  journal  = "PLoS Comput. Biol.",
+  volume   =  14,
+  number   =  5,
+  pages    = "e1006157",
+  month    =  may,
+  year     =  2018,
+  language = "en"
+}
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@ARTICLE{Chen2013-nv,
+  title    = "Ultrasensitive fluorescent proteins for imaging neuronal activity",
+  author   = "Chen, Tsai-Wen and Wardill, Trevor J and Sun, Yi and Pulver,
+              Stefan R and Renninger, Sabine L and Baohan, Amy and Schreiter,
+              Eric R and Kerr, Rex A and Orger, Michael B and Jayaraman, Vivek
+              and Looger, Loren L and Svoboda, Karel and Kim, Douglas S",
+  abstract = "Fluorescent calcium sensors are widely used to image neural
+              activity. Using structure-based mutagenesis and neuron-based
+              screening, we developed a family of ultrasensitive protein
+              calcium sensors (GCaMP6) that outperformed other sensors in
+              cultured neurons and in zebrafish, flies and mice in vivo. In
+              layer 2/3 pyramidal neurons of the mouse visual cortex, GCaMP6
+              reliably detected single action potentials in neuronal somata and
+              orientation-tuned synaptic calcium transients in individual
+              dendritic spines. The orientation tuning of structurally
+              persistent spines was largely stable over timescales of weeks.
+              Orientation tuning averaged across spine populations predicted
+              the tuning of their parent cell. Although the somata of GABAergic
+              neurons showed little orientation tuning, their dendrites
+              included highly tuned dendritic segments (5-40-µm long). GCaMP6
+              sensors thus provide new windows into the organization and
+              dynamics of neural circuits over multiple spatial and temporal
+              scales.",
+  journal  = "Nature",
+  volume   =  499,
+  number   =  7458,
+  pages    = "295--300",
+  month    =  jul,
+  year     =  2013
+}
+
+@ARTICLE{Peron2015-kd,
+  title    = "A Cellular Resolution Map of Barrel Cortex Activity during
+              Tactile Behavior",
+  author   = "Peron, Simon P and Freeman, Jeremy and Iyer, Vijay and Guo,
+              Caiying and Svoboda, Karel",
+  abstract = "Comprehensive measurement of neural activity remains challenging
+              due to the large numbers of neurons in each brain area. We used
+              volumetric two-photon imaging in mice expressing GCaMP6s and
+              nuclear red fluorescent proteins to sample activity in 75\% of
+              superficial barrel cortex neurons across the relevant cortical
+              columns, approximately 12,000 neurons per animal, during
+              performance of a single whisker object localization task.
+              Task-related activity peaked during object palpation. An encoding
+              model related activity to behavioral variables. In the column
+              corresponding to the spared whisker, 300 layer (L) 2/3 pyramidal
+              neurons (17\%) each encoded touch and whisker movements. Touch
+              representation declined by half in surrounding columns; whisker
+              movement representation was unchanged. Following the emergence of
+              stereotyped task-related movement, sensory representations showed
+              no measurable plasticity. Touch direction was topographically
+              organized, with distinct organization for passive and active
+              touch. Our work reveals sparse and spatially intermingled
+              representations of multiple tactile features. VIDEO ABSTRACT.",
+  journal  = "Neuron",
+  volume   =  86,
+  number   =  3,
+  pages    = "783--799",
+  month    =  may,
+  year     =  2015
+}
+
+@ARTICLE{Hires2015-by,
+  title    = "Low-noise encoding of active touch by layer 4 in the
+              somatosensory cortex",
+  author   = "Hires, Samuel Andrew and Gutnisky, Diego A and Yu, Jianing and
+              O'Connor, Daniel H and Svoboda, Karel",
+  abstract = "Cortical spike trains often appear noisy, with the timing and
+              number of spikes varying across repetitions of stimuli. Spiking
+              variability can arise from internal (behavioral state, unreliable
+              neurons, or chaotic dynamics in neural circuits) and external
+              (uncontrolled behavior or sensory stimuli) sources. The amount of
+              irreducible internal noise in spike trains, an important
+              constraint on models of cortical networks, has been difficult to
+              estimate, since behavior and brain state must be precisely
+              controlled or tracked. We recorded from excitatory barrel cortex
+              neurons in layer 4 during active behavior, where mice control
+              tactile input through learned whisker movements. Touch was the
+              dominant sensorimotor feature, with >70\% spikes occurring in
+              millisecond timescale epochs after touch onset. The variance of
+              touch responses was smaller than expected from Poisson processes,
+              often reaching the theoretical minimum. Layer 4 spike trains thus
+              reflect the millisecond-timescale structure of tactile input with
+              little noise.",
+  journal  = "Elife",
+  volume   =  4,
+  month    =  aug,
+  year     =  2015,
+  keywords = "barrel cortex; mouse; neuroscience; noise; sensory coding;
+              somatosensation"
+}
+
+@ARTICLE{Peron2015-qz,
+  title    = "Comprehensive imaging of cortical networks",
+  author   = "Peron, Simon and Chen, Tsai-Wen and Svoboda, Karel",
+  abstract = "Neural computations are implemented by activity in spatially
+              distributed neural circuits. Cellular imaging fills a unique
+              niche in linking activity of specific types of neurons to
+              behavior, over spatial scales spanning single neurons to entire
+              brain regions, and temporal scales from milliseconds to months.
+              Imaging may soon make it possible to track activity of all
+              neurons in a brain region, such as a cortical column. We review
+              recent methodological advances that facilitate optical imaging of
+              neuronal populations in vivo, with an emphasis on calcium imaging
+              using protein indicators in mice. We point out areas that are
+              particularly ripe for future developments.",
+  journal  = "Curr. Opin. Neurobiol.",
+  volume   =  32,
+  pages    = "115--123",
+  month    =  jun,
+  year     =  2015
+}
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@ARTICLE{OConnor2010-hd,
+  title    = "Neural activity in barrel cortex underlying vibrissa-based object
+              localization in mice",
+  author   = "O'Connor, Daniel H and Peron, Simon P and Huber, Daniel and
+              Svoboda, Karel",
+  abstract = "Classical studies have related the spiking of selected
+              neocortical neurons to behavior, but little is known about
+              activity sampled from the entire neural population. We recorded
+              from neurons selected independent of spiking, using cell-attached
+              recordings and two-photon calcium imaging, in the barrel cortex
+              of mice performing an object localization task. Spike rates
+              varied across neurons, from silence to >60 Hz. Responses were
+              diverse, with some neurons showing large increases in spike rate
+              when whiskers contacted the object. Nearly half the neurons
+              discriminated object location; a small fraction of neurons
+              discriminated perfectly. More active neurons were more
+              discriminative. Layer (L) 4 and L5 contained the highest
+              fractions of discriminating neurons (∼63\% and 79\%,
+              respectively), but a few L2/3 neurons were also highly
+              discriminating. Approximately 13,000 spikes per activated barrel
+              column were available to mice for decision making. Coding of
+              object location in the barrel cortex is therefore highly
+              redundant.",
+  journal  = "Neuron",
+  volume   =  67,
+  number   =  6,
+  pages    = "1048--1061",
+  month    =  sep,
+  year     =  2010
+}
+
+
+@ARTICLE{Brown2004-tj,
+  title    = "Multiple neural spike train data analysis: state-of-the-art and
+              future challenges",
+  author   = "Brown, Emery N and Kass, Robert E and Mitra, Partha P",
+  abstract = "Multiple electrodes are now a standard tool in neuroscience
+              research that make it possible to study the simultaneous activity
+              of several neurons in a given brain region or across different
+              regions. The data from multi-electrode studies present important
+              analysis challenges that must be resolved for optimal use of
+              these neurophysiological measurements to answer questions about
+              how the brain works. Here we review statistical methods for the
+              analysis of multiple neural spike-train data and discuss future
+              challenges for methodology research.",
+  journal  = "Nat. Neurosci.",
+  volume   =  7,
+  number   =  5,
+  pages    = "456--461",
+  month    =  may,
+  year     =  2004,
+  language = "en"
+}
+
+@ARTICLE{Paiva2010-qv,
+  title     = "A comparison of binless spike train measures",
+  author    = "Paiva, Ant{\'o}nio R C and Park, Il and Pr{\'\i}ncipe, Jos{\'e}
+               C",
+  abstract  = "Several binless spike train measures which avoid the limitations
+               of binning have been recently been proposed in the literature.
+               This paper presents a systematic comparison of these measures in
+               three simulated paradigms designed to address specific
+               situations of interest in spike train analysis where the
+               relevant feature may be in the form of firing rate, firing rate
+               modulations, and/or synchrony. The measures are first
+               disseminated and extended for ease of comparison. It also
+               discusses how the measures can be used to measure dissimilarity
+               in spike trains' firing rate despite their explicit formulation
+               for synchrony.",
+  journal   = "Neural Comput. Appl.",
+  publisher = "Springer",
+  volume    =  19,
+  number    =  3,
+  pages     = "405--419",
+  month     =  apr,
+  year      =  2010
+}
+
+
+@ARTICLE{Svoboda2015-ym,
+  title   = "Simultaneous imaging and loose-seal cell-attached electrical
+             recordings from neurons expressing a variety of genetically
+             encoded calcium indicators",
+  author  = "Svoboda, K",
+  journal = "GENIE project, Janelia Farm Campus, HHMI; CRCNS.org",
+  year    =  2015
+}
+
+
+
+
+@ARTICLE{Cunningham2014-vd,
+  title    = "Dimensionality reduction for large-scale neural recordings",
+  author   = "Cunningham, John P and Yu, Byron M",
+  abstract = "Most sensory, cognitive and motor functions depend on the
+              interactions of many neurons. In recent years, there has been
+              rapid development and increasing use of technologies for
+              recording from large numbers of neurons, either sequentially or
+              simultaneously. A key question is what scientific insight can be
+              gained by studying a population of recorded neurons beyond
+              studying each neuron individually. Here, we examine three
+              important motivations for population studies: single-trial
+              hypotheses requiring statistical power, hypotheses of population
+              response structure and exploratory analyses of large data sets.
+              Many recent studies have adopted dimensionality reduction to
+              analyze these populations and to find features that are not
+              apparent at the level of individual neurons. We describe the
+              dimensionality reduction methods commonly applied to population
+              activity and offer practical advice about selecting methods and
+              interpreting their outputs. This review is intended for
+              experimental and computational researchers who seek to understand
+              the role dimensionality reduction has had and can have in systems
+              neuroscience, and who seek to apply these methods to their own
+              data.",
+  journal  = "Nat. Neurosci.",
+  volume   =  17,
+  number   =  11,
+  pages    = "1500--1509",
+  month    =  nov,
+  year     =  2014
+}
+
+
+@ARTICLE{Harris2016-zo,
+  title     = "Improving data quality in neuronal population recordings",
+  author    = "Harris, Kenneth D and Quiroga, Rodrigo Quian and Freeman, Jeremy
+               and Smith, Spencer L",
+  abstract  = "Extracellular electrophysiology and calcium imaging are powerful
+               methods for recording neuronal populations. Yet both methods are
+               subject to confounds that, if not accounted for, could lead to
+               erroneous scientific conclusions. The authors discuss these
+               confounds, strategies for identifying and ameliorating them, and
+               potential research that could accurately calibrate population
+               recording.",
+  journal   = "Nat. Neurosci.",
+  publisher = "Nature Research",
+  volume    =  19,
+  number    =  9,
+  pages     = "1165--1174",
+  month     =  aug,
+  year      =  2016,
+  language  = "en"
+}
+
+
+@ARTICLE{Lutcke2013-wu,
+  title     = "Inference of neuronal network spike dynamics and topology from
+               calcium imaging data",
+  author    = "L{\"u}tcke, Henry and Gerhard, Felipe and Zenke, Friedemann and
+               Gerstner, Wulfram and Helmchen, Fritjof",
+  abstract  = "Two-photon calcium imaging enables functional analysis of
+               neuronal circuits by inferring action potential (AP) occurrence
+               (``spike trains'') from cellular fluorescence signals. It
+               remains unclear how experimental parameters such as
+               signal-to-noise ratio (SNR) and acquisition rate affect spike
+               inference and whether additional information about network
+               structure can be extracted. Here we present a simulation
+               framework for quantitatively assessing how well spike dynamics
+               and network topology can be inferred from noisy calcium imaging
+               data. For simulated AP-evoked calcium transients in neocortical
+               pyramidal cells, we analyzed the quality of spike inference as a
+               function of SNR and data acquisition rate using a recently
+               introduced peeling algorithm. Given experimentally attainable
+               values of SNR and acquisition rate, neural spike trains could be
+               reconstructed accurately and with up to millisecond precision.
+               We then applied statistical neuronal network models to explore
+               how remaining uncertainties in spike inference affect estimates
+               of network connectivity and topological features of network
+               organization. We define the experimental conditions suitable for
+               inferring whether the network has a scale-free structure and
+               determine how well hub neurons can be identified. Our findings
+               provide a benchmark for future calcium imaging studies that aim
+               to reliably infer neuronal network properties.",
+  journal   = "Front. Neural Circuits",
+  publisher = "ncbi.nlm.nih.gov",
+  volume    =  7,
+  pages     = "201",
+  month     =  dec,
+  year      =  2013,
+  keywords  = "action potential; calcium; connectivity; hub neurons;
+               reconstruction; scale-free",
+  language  = "en"
+}
+
+
+@ARTICLE{Stringer2019-ze,
+  title    = "High-dimensional geometry of population responses in visual
+              cortex",
+  author   = "Stringer, Carsen and Pachitariu, Marius and Steinmetz, Nicholas
+              and Carandini, Matteo and Harris, Kenneth D",
+  abstract = "A neuronal population encodes information most efficiently when
+              its stimulus responses are high-dimensional and uncorrelated, and
+              most robustly when they are lower-dimensional and correlated.
+              Here we analysed the dimensionality of the encoding of natural
+              images by large populations of neurons in the visual cortex of
+              awake mice. The evoked population activity was high-dimensional,
+              and correlations obeyed an unexpected power law: the nth
+              principal component variance scaled as 1/n. This scaling was not
+              inherited from the power law spectrum of natural images, because
+              it persisted after stimulus whitening. We proved mathematically
+              that if the variance spectrum was to decay more slowly then the
+              population code could not be smooth, allowing small changes in
+              input to dominate population activity. The theory also predicts
+              larger power-law exponents for lower-dimensional stimulus
+              ensembles, which we validated experimentally. These results
+              suggest that coding smoothness may represent a fundamental
+              constraint that determines correlations in neural population
+              codes.",
+  journal  = "Nature",
+  month    =  jun,
+  year     =  2019,
+  language = "en"
+}
+
+
+@ARTICLE{Ahrens2013-wm,
+  title    = "Whole-brain functional imaging at cellular resolution using
+              light-sheet microscopy",
+  author   = "Ahrens, Misha B and Orger, Michael B and Robson, Drew N and Li,
+              Jennifer M and Keller, Philipp J",
+  abstract = "Brain function relies on communication between large populations
+              of neurons across multiple brain areas, a full understanding of
+              which would require knowledge of the time-varying activity of all
+              neurons in the central nervous system. Here we use light-sheet
+              microscopy to record activity, reported through the genetically
+              encoded calcium indicator GCaMP5G, from the entire volume of the
+              brain of the larval zebrafish in vivo at 0.8 Hz, capturing more
+              than 80\% of all neurons at single-cell resolution. Demonstrating
+              how this technique can be used to reveal functionally defined
+              circuits across the brain, we identify two populations of neurons
+              with correlated activity patterns. One circuit consists of
+              hindbrain neurons functionally coupled to spinal cord neuropil.
+              The other consists of an anatomically symmetric population in the
+              anterior hindbrain, with activity in the left and right halves
+              oscillating in antiphase, on a timescale of 20 s, and coupled to
+              equally slow oscillations in the inferior olive.",
+  journal  = "Nat. Methods",
+  volume   =  10,
+  number   =  5,
+  pages    = "413--420",
+  month    =  may,
+  year     =  2013
+}
+
+
+@ARTICLE{Portugues2014-kq,
+  title    = "Whole-brain activity maps reveal stereotyped, distributed
+              networks for visuomotor behavior",
+  author   = "Portugues, Ruben and Feierstein, Claudia E and Engert, Florian
+              and Orger, Michael B",
+  abstract = "Most behaviors, even simple innate reflexes, are mediated by
+              circuits of neurons spanning areas throughout the brain. However,
+              in most cases, the distribution and dynamics of firing patterns
+              of these neurons during behavior are not known. We imaged
+              activity, with cellular resolution, throughout the whole brains
+              of zebrafish performing the optokinetic response. We found a
+              sparse, broadly distributed network that has an elaborate but
+              ordered pattern, with a bilaterally symmetrical organization.
+              Activity patterns fell into distinct clusters reflecting sensory
+              and motor processing. By correlating neuronal responses with an
+              array of sensory and motor variables, we find that the network
+              can be clearly divided into distinct functional modules.
+              Comparing aligned data from multiple fish, we find that the
+              spatiotemporal activity dynamics and functional organization are
+              highly stereotyped across individuals. These experiments
+              systematically reveal the functional architecture of neural
+              circuits underlying a sensorimotor behavior in a vertebrate
+              brain.",
+  journal  = "Neuron",
+  volume   =  81,
+  number   =  6,
+  pages    = "1328--1343",
+  month    =  mar,
+  year     =  2014,
+  language = "en"
+}
+
+
+@ARTICLE{Keemink2018-li,
+  title     = "{FISSA}: A neuropil decontamination toolbox for calcium imaging
+               signals",
+  author    = "Keemink, Sander W and Lowe, Scott C and Pakan, Janelle M P and
+               Dylda, Evelyn and van Rossum, Mark C W and Rochefort, Nathalie L",
+  abstract  = "In vivo calcium imaging has become a method of choice to image
+               neuronal population activity throughout the nervous system.
+               These experiments generate large sequences of images. Their
+               analysis is computationally intensive and typically involves
+               motion correction, image segmentation into regions of interest
+               (ROIs), and extraction of fluorescence traces from each ROI. Out
+               of focus fluorescence from surrounding neuropil and other cells
+               can strongly contaminate the signal assigned to a given ROI. In
+               this study, we introduce the FISSA toolbox (Fast Image Signal
+               Separation Analysis) for neuropil decontamination. Given
+               pre-defined ROIs, the FISSA toolbox automatically extracts the
+               surrounding local neuropil and performs blind-source separation
+               with non-negative matrix factorization. Using both simulated and
+               in vivo data, we show that this toolbox performs similarly or
+               better than existing published methods. FISSA requires only
+               little RAM, and allows for fast processing of large datasets
+               even on a standard laptop. The FISSA toolbox is available in
+               Python, with an option for MATLAB format outputs, and can easily
+               be integrated into existing workflows. It is available from
+               Github and the standard Python repositories.",
+  journal   = "Sci. Rep.",
+  publisher = "nature.com",
+  volume    =  8,
+  number    =  1,
+  pages     = "3493",
+  month     =  feb,
+  year      =  2018,
+  language  = "en"
+}
+
+
+@ARTICLE{Friedrich2017-ym,
+  title    = "Fast online deconvolution of calcium imaging data",
+  author   = "Friedrich, Johannes and Zhou, Pengcheng and Paninski, Liam",
+  abstract = "Fluorescent calcium indicators are a popular means for observing
+              the spiking activity of large neuronal populations, but
+              extracting the activity of each neuron from raw fluorescence
+              calcium imaging data is a nontrivial problem. We present a fast
+              online active set method to solve this sparse non-negative
+              deconvolution problem. Importantly, the algorithm progresses
+              through each time series sequentially from beginning to end, thus
+              enabling real-time online estimation of neural activity during
+              the imaging session. Our algorithm is a generalization of the
+              pool adjacent violators algorithm (PAVA) for isotonic regression
+              and inherits its linear-time computational complexity. We gain
+              remarkable increases in processing speed: more than one order of
+              magnitude compared to currently employed state of the art convex
+              solvers relying on interior point methods. Unlike these
+              approaches, our method can exploit warm starts; therefore
+              optimizing model hyperparameters only requires a handful of
+              passes through the data. A minor modification can further improve
+              the quality of activity inference by imposing a constraint on the
+              minimum spike size. The algorithm enables real-time simultaneous
+              deconvolution of O(105) traces of whole-brain larval zebrafish
+              imaging data on a laptop.",
+  journal  = "PLoS Comput. Biol.",
+  volume   =  13,
+  number   =  3,
+  pages    = "e1005423",
+  month    =  mar,
+  year     =  2017,
+  language = "en"
+}
+
+
+@ARTICLE{Pnevmatikakis2016-tk,
+  title    = "Simultaneous Denoising, Deconvolution, and Demixing of Calcium
+              Imaging Data",
+  author   = "Pnevmatikakis, Eftychios A and Soudry, Daniel and Gao, Yuanjun
+              and Machado, Timothy A and Merel, Josh and Pfau, David and
+              Reardon, Thomas and Mu, Yu and Lacefield, Clay and Yang, Weijian
+              and Ahrens, Misha and Bruno, Randy and Jessell, Thomas M and
+              Peterka, Darcy S and Yuste, Rafael and Paninski, Liam",
+  abstract = "We present a modular approach for analyzing calcium imaging
+              recordings of large neuronal ensembles. Our goal is to
+              simultaneously identify the locations of the neurons, demix
+              spatially overlapping components, and denoise and deconvolve the
+              spiking activity from the slow dynamics of the calcium indicator.
+              Our approach relies on a constrained nonnegative matrix
+              factorization that expresses the spatiotemporal fluorescence
+              activity as the product of a spatial matrix that encodes the
+              spatial footprint of each neuron in the optical field and a
+              temporal matrix that characterizes the calcium concentration of
+              each neuron over time. This framework is combined with a novel
+              constrained deconvolution approach that extracts estimates of
+              neural activity from fluorescence traces, to create a
+              spatiotemporal processing algorithm that requires minimal
+              parameter tuning. We demonstrate the general applicability of our
+              method by applying it to in vitro and in vivo multi-neuronal
+              imaging data, whole-brain light-sheet imaging data, and dendritic
+              imaging data.",
+  journal  = "Neuron",
+  month    =  jan,
+  year     =  2016
+}
+
+
+@ARTICLE{Giovannucci2019-nj,
+  title    = "{CaImAn} an open source tool for scalable calcium imaging data
+              analysis",
+  author   = "Giovannucci, Andrea and Friedrich, Johannes and Gunn, Pat and
+              Kalfon, J{\'e}r{\'e}mie and Brown, Brandon L and Koay, Sue Ann
+              and Taxidis, Jiannis and Najafi, Farzaneh and Gauthier, Jeffrey L
+              and Zhou, Pengcheng and Khakh, Baljit S and Tank, David W and
+              Chklovskii, Dmitri B and Pnevmatikakis, Eftychios A",
+  abstract = "Advances in fluorescence microscopy enable monitoring larger
+              brain areas in-vivo with finer time resolution. The resulting
+              data rates require reproducible analysis pipelines that are
+              reliable, fully automated, and scalable to datasets generated
+              over the course of months. We present CaImAn, an open-source
+              library for calcium imaging data analysis. CaImAn provides
+              automatic and scalable methods to address problems common to
+              pre-processing, including motion correction, neural activity
+              identification, and registration across different sessions of
+              data collection. It does this while requiring minimal user
+              intervention, with good scalability on computers ranging from
+              laptops to high-performance computing clusters. CaImAn is
+              suitable for two-photon and one-photon imaging, and also enables
+              real-time analysis on streaming data. To benchmark the
+              performance of CaImAn we collected and combined a corpus of
+              manual annotations from multiple labelers on nine mouse
+              two-photon datasets. We demonstrate that CaImAn achieves
+              near-human performance in detecting locations of active neurons.",
+  journal  = "Elife",
+  volume   =  8,
+  month    =  jan,
+  year     =  2019,
+  keywords = "calcium imaging; data analysis; mouse; neuroscience; one-photon;
+              open source; software; two-photon; zebrafish",
+  language = "en"
+}
+
+
+@ARTICLE{Vogelstein2010-uc,
+  title     = "Fast nonnegative deconvolution for spike train inference from
+               population calcium imaging",
+  author    = "Vogelstein, Joshua T and Packer, Adam M and Machado, Timothy A
+               and Sippy, Tanya and Babadi, Baktash and Yuste, Rafael and
+               Paninski, Liam",
+  abstract  = "Fluorescent calcium indicators are becoming increasingly popular
+               as a means for observing the spiking activity of large neuronal
+               populations. Unfortunately, extracting the spike train of each
+               neuron from a raw fluorescence movie is a nontrivial problem.
+               This work presents a fast nonnegative deconvolution filter to
+               infer the approximately most likely spike train of each neuron,
+               given the fluorescence observations. This algorithm outperforms
+               optimal linear deconvolution (Wiener filtering) on both
+               simulated and biological data. The performance gains come from
+               restricting the inferred spike trains to be positive (using an
+               interior-point method), unlike the Wiener filter. The algorithm
+               runs in linear time, and is fast enough that even when
+               simultaneously imaging >100 neurons, inference can be performed
+               on the set of all observed traces faster than real time.
+               Performing optimal spatial filtering on the images further
+               refines the inferred spike train estimates. Importantly, all the
+               parameters required to perform the inference can be estimated
+               using only the fluorescence data, obviating the need to perform
+               joint electrophysiological and imaging calibration experiments.",
+  journal   = "J. Neurophysiol.",
+  publisher = "physiology.org",
+  volume    =  104,
+  number    =  6,
+  pages     = "3691--3704",
+  month     =  dec,
+  year      =  2010,
+  language  = "en"
+}
+
+@ARTICLE{Kaifosh2014-zo,
+  title     = "{SIMA}: Python software for analysis of dynamic fluorescence
+               imaging data",
+  author    = "Kaifosh, Patrick and Zaremba, Jeffrey D and Danielson, Nathan B
+               and Losonczy, Attila",
+  abstract  = "Fluorescence imaging is a powerful method for monitoring dynamic
+               signals in the nervous system. However, analysis of dynamic
+               fluorescence imaging data remains burdensome, in part due to the
+               shortage of available software tools. To address this need, we
+               have developed SIMA, an open source Python package that
+               facilitates common analysis tasks related to fluorescence
+               imaging. Functionality of this package includes correction of
+               motion artifacts occurring during in vivo imaging with
+               laser-scanning microscopy, segmentation of imaged fields into
+               regions of interest (ROIs), and extraction of signals from the
+               segmented ROIs. We have also developed a graphical user
+               interface (GUI) for manual editing of the automatically
+               segmented ROIs and automated registration of ROIs across
+               multiple imaging datasets. This software has been designed with
+               flexibility in mind to allow for future extension with different
+               analysis methods and potential integration with other packages.
+               Software, documentation, and source code for the SIMA package
+               and ROI Buddy GUI are freely available at
+               http://www.losonczylab.org/sima/.",
+  journal   = "Front. Neuroinform.",
+  publisher = "frontiersin.org",
+  volume    =  8,
+  pages     = "80",
+  month     =  sep,
+  year      =  2014,
+  keywords  = "Python language; analysis software; calcium imaging;
+               fluorescence imaging; in vivo GECI imaging; motion correction;
+               multi-photon microscopy; segmentation",
+  language  = "en"
+}
+
+@ARTICLE{Mukamel2009-am,
+  title     = "Automated analysis of cellular signals from large-scale calcium
+               imaging data",
+  author    = "Mukamel, Eran A and Nimmerjahn, Axel and Schnitzer, Mark J",
+  abstract  = "Recent advances in fluorescence imaging permit studies of Ca(2+)
+               dynamics in large numbers of cells, in anesthetized and awake
+               behaving animals. However, unlike for electrophysiological
+               signals, standardized algorithms for assigning optically
+               recorded signals to individual cells have not yet emerged. Here,
+               we describe an automated sorting procedure that combines
+               independent component analysis and image segmentation for
+               extracting cells' locations and their dynamics with minimal
+               human supervision. In validation studies using simulated data,
+               automated sorting significantly improved estimation of cellular
+               signals compared to conventional analysis based on image regions
+               of interest. We used automated procedures to analyze data
+               recorded by two-photon Ca(2+) imaging in the cerebellar vermis
+               of awake behaving mice. Our analysis yielded simultaneous Ca(2+)
+               activity traces for up to >100 Purkinje cells and Bergmann glia
+               from single recordings. Using this approach, we found microzones
+               of Purkinje cells that were stable across behavioral states and
+               in which synchronous Ca(2+) spiking rose significantly during
+               locomotion.",
+  journal   = "Neuron",
+  publisher = "Elsevier",
+  volume    =  63,
+  number    =  6,
+  pages     = "747--760",
+  month     =  sep,
+  year      =  2009,
+  language  = "en"
+}
+
+
+@ARTICLE{Stringer2018-st,
+  title    = "Computational processing of neural recordings from calcium
+              imaging data",
+  author   = "Stringer, Carsen and Pachitariu, Marius",
+  abstract = "Electrophysiology has long been the workhorse of neuroscience,
+              allowing scientists to record with millisecond precision the
+              action potentials generated by neurons in vivo. Recently, calcium
+              imaging of fluorescent indicators has emerged as a powerful
+              alternative. This technique has its own strengths and weaknesses
+              and unique data processing problems and interpretation confounds.
+              Here we review the computational methods that convert raw calcium
+              movies to estimates of single neuron spike times with minimal
+              human supervision. By computationally addressing the weaknesses
+              of calcium imaging, these methods hold the promise of
+              significantly improving data quality. We also introduce a new
+              metric to evaluate the output of these processing pipelines,
+              which is based on the cluster isolation distance routinely used
+              in electrophysiology.",
+  journal  = "Curr. Opin. Neurobiol.",
+  volume   =  55,
+  pages    = "22--31",
+  month    =  dec,
+  year     =  2018,
+  language = "en"
+}
+
+
+@ARTICLE{Harvey2012-bh,
+  title    = "Choice-specific sequences in parietal cortex during a
+              virtual-navigation decision task",
+  author   = "Harvey, Christopher D and Coen, Philip and Tank, David W",
+  abstract = "The posterior parietal cortex (PPC) has an important role in many
+              cognitive behaviours; however, the neural circuit dynamics
+              underlying PPC function are not well understood. Here we
+              optically imaged the spatial and temporal activity patterns of
+              neuronal populations in mice performing a PPC-dependent task that
+              combined a perceptual decision and memory-guided navigation in a
+              virtual environment. Individual neurons had transient activation
+              staggered relative to one another in time, forming a sequence of
+              neuronal activation spanning the entire length of a task trial.
+              Distinct sequences of neurons were triggered on trials with
+              opposite behavioural choices and defined divergent,
+              choice-specific trajectories through a state space of neuronal
+              population activity. Cells participating in the different
+              sequences and at distinct time points in the task were
+              anatomically intermixed over microcircuit length scales (<100
+              micrometres). During working memory decision tasks, the PPC may
+              therefore perform computations through sequence-based circuit
+              dynamics, rather than long-lived stable states, implemented using
+              anatomically intermingled microcircuits.",
+  journal  = "Nature",
+  volume   =  484,
+  number   =  7392,
+  pages    = "62--68",
+  month    =  apr,
+  year     =  2012
+}
+
+
+@ARTICLE{Huber2012-mi,
+  title    = "Multiple dynamic representations in the motor cortex during
+              sensorimotor learning",
+  author   = "Huber, Daniel and Gutnisky, D A and Peron, S and O'Connor, D H
+              and Wiegert, J S and Tian, L and Oertner, T G and Looger, L L and
+              Svoboda, K",
+  abstract = "The mechanisms linking sensation and action during learning are
+              poorly understood. Layer 2/3 neurons in the motor cortex might
+              participate in sensorimotor integration and learning; they
+              receive input from sensory cortex and excite deep layer neurons,
+              which control movement. Here we imaged activity in the same set
+              of layer 2/3 neurons in the motor cortex over weeks, while mice
+              learned to detect objects with their whiskers and report
+              detection with licking. Spatially intermingled neurons
+              represented sensory (touch) and motor behaviours (whisker
+              movements and licking). With learning, the population-level
+              representation of task-related licking strengthened. In trained
+              mice, population-level representations were redundant and stable,
+              despite dynamism of single-neuron representations. The activity
+              of a subpopulation of neurons was consistent with touch driving
+              licking behaviour. Our results suggest that ensembles of motor
+              cortex neurons couple sensory input to multiple, related motor
+              programs during learning.",
+  journal  = "Nature",
+  volume   =  484,
+  number   =  7395,
+  pages    = "473--478",
+  month    =  apr,
+  year     =  2012
+}
+
+
+@ARTICLE{Kato2015-sb,
+  title    = "Global Brain Dynamics Embed the Motor Command Sequence of
+              Caenorhabditis elegans",
+  author   = "Kato, Saul and Kaplan, Harris S and Schr{\"o}del, Tina and Skora,
+              Susanne and Lindsay, Theodore H and Yemini, Eviatar and Lockery,
+              Shawn and Zimmer, Manuel",
+  abstract = "While isolated motor actions can be correlated with activities of
+              neuronal networks, an unresolved problem is how the brain
+              assembles these activities into organized behaviors like action
+              sequences. Using brain-wide calcium imaging in Caenorhabditis
+              elegans, we show that a large proportion of neurons across the
+              brain share information by engaging in coordinated, dynamical
+              network activity. This brain state evolves on a cycle, each
+              segment of which recruits the activities of different neuronal
+              sub-populations and can be explicitly mapped, on a single trial
+              basis, to the animals' major motor commands. This organization
+              defines the assembly of motor commands into a string of
+              run-and-turn action sequence cycles, including decisions between
+              alternative behaviors. These dynamics serve as a robust scaffold
+              for action selection in response to sensory input. This study
+              shows that the coordination of neuronal activity patterns into
+              global brain dynamics underlies the high-level organization of
+              behavior.",
+  journal  = "Cell",
+  volume   =  163,
+  number   =  3,
+  pages    = "656--669",
+  month    =  oct,
+  year     =  2015
+}
+
+
+@ARTICLE{Churchland2012-jq,
+  title    = "Neural population dynamics during reaching",
+  author   = "Churchland, Mark M and Cunningham, John P and Kaufman, Matthew T
+              and Foster, Justin D and Nuyujukian, Paul and Ryu, Stephen I and
+              Shenoy, Krishna V",
+  abstract = "Most theories of motor cortex have assumed that neural activity
+              represents movement parameters. This view derives from what is
+              known about primary visual cortex, where neural activity
+              represents patterns of light. Yet it is unclear how well the
+              analogy between motor and visual cortex holds. Single-neuron
+              responses in motor cortex are complex, and there is marked
+              disagreement regarding which movement parameters are represented.
+              A better analogy might be with other motor systems, where a
+              common principle is rhythmic neural activity. Here we find that
+              motor cortex responses during reaching contain a brief but strong
+              oscillatory component, something quite unexpected for a
+              non-periodic behaviour. Oscillation amplitude and phase followed
+              naturally from the preparatory state, suggesting a mechanistic
+              role for preparatory neural activity. These results demonstrate
+              an unexpected yet surprisingly simple structure in the population
+              response. This underlying structure explains many of the
+              confusing features of individual neural responses.",
+  journal  = "Nature",
+  volume   =  487,
+  number   =  7405,
+  pages    = "51--56",
+  month    =  jul,
+  year     =  2012
+}
+
+
+@ARTICLE{Briggman2005-ht,
+  title    = "Optical imaging of neuronal populations during decision-making",
+  author   = "Briggman, K L and Abarbanel, H D I and Kristan, Jr, W B",
+  abstract = "We investigated decision-making in the leech nervous system by
+              stimulating identical sensory inputs that sometimes elicit
+              crawling and other times swimming. Neuronal populations were
+              monitored with voltage-sensitive dyes after each stimulus. By
+              quantifying the discrimination time of each neuron, we found
+              single neurons that discriminate before the two behaviors are
+              evident. We used principal component analysis and linear
+              discriminant analysis to find populations of neurons that
+              discriminated earlier than any single neuron. The analysis
+              highlighted the neuron cell 208. Hyperpolarizing cell 208 during
+              a stimulus biases the leech to swim; depolarizing it biases the
+              leech to crawl or to delay swimming.",
+  journal  = "Science",
+  volume   =  307,
+  number   =  5711,
+  pages    = "896--901",
+  month    =  feb,
+  year     =  2005
+}
+
+
+@ARTICLE{Kobak2016-xy,
+  title    = "Demixed principal component analysis of neural population data",
+  author   = "Kobak, Dmitry and Brendel, Wieland and Constantinidis, Christos
+              and Feierstein, Claudia E and Kepecs, Adam and Mainen, Zachary F
+              and Qi, Xue-Lian and Romo, Ranulfo and Uchida, Naoshige and
+              Machens, Christian K",
+  abstract = "Neurons in higher cortical areas, such as the prefrontal cortex,
+              are often tuned to a variety of sensory and motor variables, and
+              are therefore said to display mixed selectivity. This complexity
+              of single neuron responses can obscure what information these
+              areas represent and how it is represented. Here we demonstrate
+              the advantages of a new dimensionality reduction technique,
+              demixed principal component analysis (dPCA), that decomposes
+              population activity into a few components. In addition to
+              systematically capturing the majority of the variance of the
+              data, dPCA also exposes the dependence of the neural
+              representation on task parameters such as stimuli, decisions, or
+              rewards. To illustrate our method we reanalyze population data
+              from four datasets comprising different species, different
+              cortical areas and different experimental tasks. In each case,
+              dPCA provides a concise way of visualizing the data that
+              summarizes the task-dependent features of the population response
+              in a single figure.",
+  journal  = "Elife",
+  volume   =  5,
+  month    =  apr,
+  year     =  2016,
+  keywords = "dimensionality reduction; neuroscience; population activity;
+              prefrontal cortex; principal component analysis; rat; rhesus
+              macaque",
+  language = "en"
+}
+
+
+@ARTICLE{Klaus2017-wn,
+  title     = "The Spatiotemporal Organization of the Striatum Encodes Action
+               Space",
+  author    = "Klaus, Andreas and Martins, Gabriela J and Paixao, Vitor B and
+               Zhou, Pengcheng and Paninski, Liam and Costa, Rui M",
+  abstract  = "SummaryActivity in striatal direct- and indirect-pathway spiny
+               projection neurons (SPNs) is critical for proper movement.
+               However, little is known about the spatiotemporal organization
+               of this activity. We investigated the spatiotemporal
+               organization of SPN ensemble activity in mice during self-paced,
+               natural movements using microendoscopic imaging. Activity in
+               both pathways showed predominantly local but also some
+               long-range correlations. Using a novel approach to cluster and
+               quantify behaviors based on continuous accelerometer and video
+               data, we found that SPN ensembles active during specific actions
+               were spatially closer and more correlated overall. Furthermore,
+               similarity between different actions corresponded to the
+               similarity between SPN ensemble patterns, irrespective of
+               movement speed. Consistently, the accuracy of decoding behavior
+               from SPN ensemble patterns was directly related to the
+               dissimilarity between behavioral clusters. These results
+               identify a predominantly local, but not spatially compact,
+               organization of direct- and indirect-pathway SPN activity that
+               maps action space independently of movement speed.",
+  journal   = "Neuron",
+  publisher = "Elsevier",
+  volume    =  95,
+  number    =  5,
+  pages     = "1171--1180.e7",
+  month     =  aug,
+  year      =  2017,
+  keywords  = "basal ganglia; direct pathway; indirect pathway; caudate;
+               putamen; calcium imaging; neural correlation; population
+               activity; action space; behavior decoding",
+  language  = "en"
+}
+
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@ARTICLE{Munafo2018-ab,
+  title     = "Robust research needs many lines of evidence",
+  author    = "Munaf{\`o}, Marcus R and Davey Smith, George",
+  abstract  = "Several studies across many fields estimate that only around
+               40\% of published findings can be replicated reliably. Various
+               funders and communities are promoting ways for independent teams
+               to routinely replicate the findings of others.These efforts are
+               laudable …",
+  journal   = "Nature",
+  publisher = "nature.com",
+  volume    =  553,
+  number    =  7689,
+  pages     = "399--401",
+  month     =  jan,
+  year      =  2018,
+  language  = "en"
+}
+
+
+
+@ARTICLE{Dana2019-mz,
+  title    = "High-performance calcium sensors for imaging activity in neuronal
+              populations and microcompartments",
+  author   = "Dana, Hod and Sun, Yi and Mohar, Boaz and Hulse, Brad K and
+              Kerlin, Aaron M and Hasseman, Jeremy P and Tsegaye, Getahun and
+              Tsang, Arthur and Wong, Allan and Patel, Ronak and Macklin, John
+              J and Chen, Yang and Konnerth, Arthur and Jayaraman, Vivek and
+              Looger, Loren L and Schreiter, Eric R and Svoboda, Karel and Kim,
+              Douglas S",
+  abstract = "Calcium imaging with genetically encoded calcium indicators
+              (GECIs) is routinely used to measure neural activity in intact
+              nervous systems. GECIs are frequently used in one of two
+              different modes: to track activity in large populations of
+              neuronal cell bodies, or to follow dynamics in subcellular
+              compartments such as axons, dendrites and individual synaptic
+              compartments. Despite major advances, calcium imaging is still
+              limited by the biophysical properties of existing GECIs,
+              including affinity, signal-to-noise ratio, rise and decay
+              kinetics and dynamic range. Using structure-guided mutagenesis
+              and neuron-based screening, we optimized the green fluorescent
+              protein-based GECI GCaMP6 for different modes of in vivo imaging.
+              The resulting jGCaMP7 sensors provide improved detection of
+              individual spikes (jGCaMP7s,f), imaging in neurites and neuropil
+              (jGCaMP7b), and may allow tracking larger populations of neurons
+              using two-photon (jGCaMP7s,f) or wide-field (jGCaMP7c) imaging.",
+  journal  = "Nat. Methods",
+  volume   =  16,
+  number   =  7,
+  pages    = "649--657",
+  month    =  jul,
+  year     =  2019,
+  language = "en"
+}
+
+@ARTICLE{Dana2016-yg,
+  title    = "Sensitive red protein calcium indicators for imaging neural
+              activity",
+  author   = "Dana, Hod and Mohar, Boaz and Sun, Yi and Narayan, Sujatha and
+              Gordus, Andrew and Hasseman, Jeremy P and Tsegaye, Getahun and
+              Holt, Graham T and Hu, Amy and Walpita, Deepika and Patel, Ronak
+              and Macklin, John J and Bargmann, Cornelia I and Ahrens, Misha B
+              and Schreiter, Eric R and Jayaraman, Vivek and Looger, Loren L
+              and Svoboda, Karel and Kim, Douglas S",
+  abstract = "Genetically encoded calcium indicators (GECIs) allow measurement
+              of activity in large populations of neurons and in small neuronal
+              compartments, over times of milliseconds to months. Although
+              GFP-based GECIs are widely used for in vivo neurophysiology,
+              GECIs with red-shifted excitation and emission spectra have
+              advantages for in vivo imaging because of reduced scattering and
+              absorption in tissue, and a consequent reduction in
+              phototoxicity. However, current red GECIs are inferior to the
+              state-of-the-art GFP-based GCaMP6 indicators for detecting and
+              quantifying neural activity. Here we present improved red GECIs
+              based on mRuby (jRCaMP1a, b) and mApple (jRGECO1a), with
+              sensitivity comparable to GCaMP6. We characterized the
+              performance of the new red GECIs in cultured neurons and in
+              mouse, Drosophila, zebrafish and C. elegans in vivo. Red GECIs
+              facilitate deep-tissue imaging, dual-color imaging together with
+              GFP-based reporters, and the use of optogenetics in combination
+              with calcium imaging.",
+  journal  = "Elife",
+  volume   =  5,
+  month    =  mar,
+  year     =  2016,
+  keywords = "C. elegans; D. melanogaster; GECI; calcium imaging; fluorescent
+              probes; mouse; neuroscience; protein engineering; zebrafish",
+  language = "en"
+}
+
+
+
+
+@ARTICLE{Chapin1999-lf,
+  title     = "Principal component analysis of neuronal ensemble activity
+               reveals multidimensional somatosensory representations",
+  author    = "Chapin, J K and Nicolelis, M A",
+  abstract  = "Principal components analysis (PCA) was used to define the
+               linearly dependent factors underlying sensory information
+               processing in the vibrissal sensory area of the ventral
+               posterior medial (VPM) thalamus in eight awake rats. Ensembles
+               of up to 23 single neurons were simultaneously recorded in this
+               area, either during long periods of spontaneous behavior
+               (including exploratory whisking) or controlled deflection of
+               single whiskers. PCA rotated the matrices of correlation between
+               these n neurons into a series of n uncorrelated principal
+               components (PCs), each successive PC oriented to explain a
+               maximum of the remaining variance. The fact that this
+               transformation is mathematically equivalent to the general Hebb
+               algorithm in linear neural networks provided a major rationale
+               for performing it here on data from real neuronal ensembles.
+               Typically, most information correlated across neurons in the
+               ensemble was concentrated within the first 3-8 PCs. Each of
+               these was found to encode distinct, and highly significant
+               informational factors. These factor encodings were assessed in
+               two ways, each making use of fact that each PC consisted of a
+               matrix of weightings, one for each neuron. First, the neurons
+               were rank ordered according to the locations of the central
+               whiskers in their receptive fields, allowing their weightings
+               within different PCs to be viewed as a function of their
+               position within the whisker representation in the VPM. Each PC
+               was found to define a distinctly different topographic mapping
+               of the cutaneous surface. Next, the PCs were used to weight-sum
+               the neurons' simultaneous activities to create population
+               vectors (PVs). Each PV consisted of a single continuous time
+               series which represented the expression of each PC's 'magnitude'
+               in response to stimulation of different whiskers, or during
+               behavioral events such as active tactile whisking. These showed
+               that each PC functioned as a feature detector capable of
+               selectively predicting significant sensory or behavioral events
+               with far greater statistical reliability than could any single
+               neuron. The encoding characteristics of the first few PCs were
+               remarkably consistent across all animals and experimental
+               conditions, including both spontaneous exploration and direct
+               sensory stimulation: PC1 positively weighted all neurons, mainly
+               according to their covariance. Thus it encoded global magnitude
+               of ensemble activity, caused either by combined sensory inputs
+               or intrinsic network activity, such as spontaneous oscillations.
+               PC2 encoded spatial position contrast, generally in the
+               rostrocaudal dimension, across the whole cutaneous surface
+               represented by the ensemble. PC3 more selectively encoded
+               contrast in an orthogonal (usually dorsoventral) dimension. A
+               variable number of higher numbered PCs encoded local position
+               contrast within one or more smaller regions of the cutaneous
+               surface. The remaining PCs typically explained residual 'noise',
+               i.e. the uncorrelated variance that constituted a major part of
+               each neuron's activity. Differences in behavioral or sensory
+               experience produced relatively little in the PC weighting
+               patterns but often changed the variance they explained
+               (eigenvalues) enough to alter their ordering. These results
+               argue that PCA provides a powerful set of tools for selectively
+               measuring neural ensemble activity within multiple functionally
+               significant 'dimensions' of information processing. As such, it
+               redefines the 'neuron' as an entity which contributes portions
+               of its variance to processing not one, but several tasks.",
+  journal   = "J. Neurosci. Methods",
+  publisher = "Elsevier",
+  volume    =  94,
+  number    =  1,
+  pages     = "121--140",
+  month     =  dec,
+  year      =  1999,
+  language  = "en"
+}
+
+
+@ARTICLE{Badura2014-ub,
+  title     = "Fast calcium sensor proteins for monitoring neural activity",
+  author    = "Badura, Aleksandra and Sun, Xiaonan Richard and Giovannucci,
+               Andrea and Lynch, Laura A and Wang, Samuel S-H",
+  abstract  = "A major goal of the BRAIN Initiative is the development of
+               technologies to monitor neuronal network activity during active
+               information processing. Toward this goal, genetically encoded
+               calcium indicator proteins have become widely used for reporting
+               activity in preparations ranging from invertebrates to awake
+               mammals. However, slow response times, the narrow sensitivity
+               range of Ca2+ and in some cases, poor signal-to-noise ratio
+               still limit their usefulness. Here, we review recent
+               improvements in the field of neural activity-sensitive probe
+               design with a focus on the GCaMP family of calcium indicator
+               proteins. In this context, we present our newly developed
+               Fast-GCaMPs, which have up to 4-fold accelerated off-responses
+               compared with the next-fastest GCaMP, GCaMP6f. Fast-GCaMPs were
+               designed by destabilizing the association of the hydrophobic
+               pocket of calcium-bound calmodulin with the RS20 binding domain,
+               an intramolecular interaction that protects the green
+               fluorescent protein chromophore. Fast-GCaMP6f-RS06 and
+               Fast-GCaMP6f-RS09 have rapid off-responses in stopped-flow
+               fluorimetry, in neocortical brain slices, and in the intact
+               cerebellum in vivo. Fast-GCaMP6f variants should be useful for
+               tracking action potentials closely spaced in time, and for
+               following neural activity in fast-changing compartments, such as
+               axons and dendrites. Finally, we discuss strategies that may
+               allow tracking of a wider range of neuronal firing rates and
+               improve spike detection.",
+  journal   = "Neurophotonics",
+  publisher = "spiedigitallibrary.org",
+  volume    =  1,
+  number    =  2,
+  pages     = "025008",
+  month     =  oct,
+  year      =  2014,
+  keywords  = "GCaMP; calcium indicator proteins; in vivo imaging; kinetics",
+  language  = "en"
+}
+
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@INPROCEEDINGS{Davis2006-ya,
+  title     = "The Relationship Between {Precision-Recall} and {ROC} Curves",
+  booktitle = "Proceedings of the 23rd International Conference on Machine
+               Learning",
+  author    = "Davis, Jesse and Goadrich, Mark",
+  abstract  = "Abstract Receiver Operator Characteristic (ROC) curves are
+               commonly used to present results for binary decision problems in
+               machine learning. However, when dealing with highly skewed
+               datasets, Precision-Recall (PR) curves give a more informative
+               picture of an algorithm's performance. We show that a deep
+               connection exists between ROC space and PR space, such that a
+               curve dominates in ROC space if and only if it dominates in PR
+               space. A corollary is the notion of an achievable PR curve,
+               which has properties much like the …",
+  publisher = "ACM",
+  pages     = "233--240",
+  series    = "ICML '06",
+  year      =  2006,
+  address   = "New York, NY, USA",
+  location  = "Pittsburgh, Pennsylvania, USA"
+}
+
+

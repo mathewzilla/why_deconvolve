@@ -1,0 +1,349 @@
+\begin{thebibliography}{45}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Ahrens et~al.(2013)Ahrens, Orger, Robson, Li, and
+  Keller]{Ahrens2013-wm}
+Misha~B Ahrens, Michael~B Orger, Drew~N Robson, Jennifer~M Li, and Philipp~J
+  Keller.
+\newblock Whole-brain functional imaging at cellular resolution using
+  light-sheet microscopy.
+\newblock \emph{Nat. Methods}, 10\penalty0 (5):\penalty0 413--420, May 2013.
+
+\bibitem[Badura et~al.(2014)Badura, Sun, Giovannucci, Lynch, and
+  Wang]{Badura2014-ub}
+Aleksandra Badura, Xiaonan~Richard Sun, Andrea Giovannucci, Laura~A Lynch, and
+  Samuel S-H Wang.
+\newblock Fast calcium sensor proteins for monitoring neural activity.
+\newblock \emph{Neurophotonics}, 1\penalty0 (2):\penalty0 025008, October 2014.
+
+\bibitem[Berens et~al.(2018)Berens, Freeman, Deneux, Chenkov, McColgan,
+  Speiser, Macke, Turaga, Mineault, Rupprecht, Gerhard, Friedrich, Friedrich,
+  Paninski, Pachitariu, Harris, Bolte, Machado, Ringach, Stone, Rogerson,
+  Sofroniew, Reimer, Froudarakis, Euler, Rom{\'a}n~Ros{\'o}n, Theis, Tolias,
+  and Bethge]{Berens2018-su}
+Philipp Berens, Jeremy Freeman, Thomas Deneux, Nicolay Chenkov, Thomas
+  McColgan, Artur Speiser, Jakob~H Macke, Srinivas~C Turaga, Patrick Mineault,
+  Peter Rupprecht, Stephan Gerhard, Rainer~W Friedrich, Johannes Friedrich,
+  Liam Paninski, Marius Pachitariu, Kenneth~D Harris, Ben Bolte, Timothy~A
+  Machado, Dario Ringach, Jasmine Stone, Luke~E Rogerson, Nicolas~J Sofroniew,
+  Jacob Reimer, Emmanouil Froudarakis, Thomas Euler, Miroslav
+  Rom{\'a}n~Ros{\'o}n, Lucas Theis, Andreas~S Tolias, and Matthias Bethge.
+\newblock Community-based benchmarking improves spike rate inference from
+  two-photon calcium imaging data.
+\newblock \emph{PLoS Comput. Biol.}, 14\penalty0 (5):\penalty0 e1006157, May
+  2018.
+
+\bibitem[Briggman et~al.(2005)Briggman, Abarbanel, and
+  Kristan]{Briggman2005-ht}
+K~L Briggman, H~D~I Abarbanel, and W~B Kristan, Jr.
+\newblock Optical imaging of neuronal populations during decision-making.
+\newblock \emph{Science}, 307\penalty0 (5711):\penalty0 896--901, February
+  2005.
+
+\bibitem[Brown et~al.(2004)Brown, Kass, and Mitra]{Brown2004-tj}
+Emery~N Brown, Robert~E Kass, and Partha~P Mitra.
+\newblock Multiple neural spike train data analysis: state-of-the-art and
+  future challenges.
+\newblock \emph{Nat. Neurosci.}, 7\penalty0 (5):\penalty0 456--461, May 2004.
+
+\bibitem[Chapin and Nicolelis(1999)]{Chapin1999-lf}
+J~K Chapin and M~A Nicolelis.
+\newblock Principal component analysis of neuronal ensemble activity reveals
+  multidimensional somatosensory representations.
+\newblock \emph{J. Neurosci. Methods}, 94\penalty0 (1):\penalty0 121--140,
+  December 1999.
+
+\bibitem[Chen et~al.(2013)Chen, Wardill, Sun, Pulver, Renninger, Baohan,
+  Schreiter, Kerr, Orger, Jayaraman, Looger, Svoboda, and Kim]{Chen2013-nv}
+Tsai-Wen Chen, Trevor~J Wardill, Yi~Sun, Stefan~R Pulver, Sabine~L Renninger,
+  Amy Baohan, Eric~R Schreiter, Rex~A Kerr, Michael~B Orger, Vivek Jayaraman,
+  Loren~L Looger, Karel Svoboda, and Douglas~S Kim.
+\newblock Ultrasensitive fluorescent proteins for imaging neuronal activity.
+\newblock \emph{Nature}, 499\penalty0 (7458):\penalty0 295--300, July 2013.
+
+\bibitem[Churchland et~al.(2012)Churchland, Cunningham, Kaufman, Foster,
+  Nuyujukian, Ryu, and Shenoy]{Churchland2012-jq}
+Mark~M Churchland, John~P Cunningham, Matthew~T Kaufman, Justin~D Foster, Paul
+  Nuyujukian, Stephen~I Ryu, and Krishna~V Shenoy.
+\newblock Neural population dynamics during reaching.
+\newblock \emph{Nature}, 487\penalty0 (7405):\penalty0 51--56, July 2012.
+
+\bibitem[Cunningham and Yu(2014)]{Cunningham2014-vd}
+John~P Cunningham and Byron~M Yu.
+\newblock Dimensionality reduction for large-scale neural recordings.
+\newblock \emph{Nat. Neurosci.}, 17\penalty0 (11):\penalty0 1500--1509,
+  November 2014.
+
+\bibitem[Dana et~al.(2016)Dana, Mohar, Sun, Narayan, Gordus, Hasseman, Tsegaye,
+  Holt, Hu, Walpita, Patel, Macklin, Bargmann, Ahrens, Schreiter, Jayaraman,
+  Looger, Svoboda, and Kim]{Dana2016-yg}
+Hod Dana, Boaz Mohar, Yi~Sun, Sujatha Narayan, Andrew Gordus, Jeremy~P
+  Hasseman, Getahun Tsegaye, Graham~T Holt, Amy Hu, Deepika Walpita, Ronak
+  Patel, John~J Macklin, Cornelia~I Bargmann, Misha~B Ahrens, Eric~R Schreiter,
+  Vivek Jayaraman, Loren~L Looger, Karel Svoboda, and Douglas~S Kim.
+\newblock Sensitive red protein calcium indicators for imaging neural activity.
+\newblock \emph{Elife}, 5, March 2016.
+
+\bibitem[Dana et~al.(2019)Dana, Sun, Mohar, Hulse, Kerlin, Hasseman, Tsegaye,
+  Tsang, Wong, Patel, Macklin, Chen, Konnerth, Jayaraman, Looger, Schreiter,
+  Svoboda, and Kim]{Dana2019-mz}
+Hod Dana, Yi~Sun, Boaz Mohar, Brad~K Hulse, Aaron~M Kerlin, Jeremy~P Hasseman,
+  Getahun Tsegaye, Arthur Tsang, Allan Wong, Ronak Patel, John~J Macklin, Yang
+  Chen, Arthur Konnerth, Vivek Jayaraman, Loren~L Looger, Eric~R Schreiter,
+  Karel Svoboda, and Douglas~S Kim.
+\newblock High-performance calcium sensors for imaging activity in neuronal
+  populations and microcompartments.
+\newblock \emph{Nat. Methods}, 16\penalty0 (7):\penalty0 649--657, July 2019.
+
+\bibitem[Davis and Goadrich(2006)]{Davis2006-ya}
+Jesse Davis and Mark Goadrich.
+\newblock The relationship between {Precision-Recall} and {ROC} curves.
+\newblock In \emph{Proceedings of the 23rd International Conference on Machine
+  Learning}, ICML '06, pages 233--240, New York, NY, USA, 2006. ACM.
+
+\bibitem[Deneux et~al.(2016)Deneux, Kaszas, Szalay, Katona, Lakner, Grinvald,
+  R{\'o}zsa, and Vanzetta]{Deneux2016-gu}
+Thomas Deneux, Attila Kaszas, Gergely Szalay, Gergely Katona, Tam{\'a}s Lakner,
+  Amiram Grinvald, Bal{\'a}zs R{\'o}zsa, and Ivo Vanzetta.
+\newblock Accurate spike estimation from noisy calcium signals for ultrafast
+  three-dimensional imaging of large neuronal populations in vivo.
+\newblock \emph{Nat. Commun.}, 7:\penalty0 12190, July 2016.
+
+\bibitem[Friedrich et~al.(2017)Friedrich, Zhou, and Paninski]{Friedrich2017-ym}
+Johannes Friedrich, Pengcheng Zhou, and Liam Paninski.
+\newblock Fast online deconvolution of calcium imaging data.
+\newblock \emph{PLoS Comput. Biol.}, 13\penalty0 (3):\penalty0 e1005423, March
+  2017.
+
+\bibitem[Giovannucci et~al.(2019)Giovannucci, Friedrich, Gunn, Kalfon, Brown,
+  Koay, Taxidis, Najafi, Gauthier, Zhou, Khakh, Tank, Chklovskii, and
+  Pnevmatikakis]{Giovannucci2019-nj}
+Andrea Giovannucci, Johannes Friedrich, Pat Gunn, J{\'e}r{\'e}mie Kalfon,
+  Brandon~L Brown, Sue~Ann Koay, Jiannis Taxidis, Farzaneh Najafi, Jeffrey~L
+  Gauthier, Pengcheng Zhou, Baljit~S Khakh, David~W Tank, Dmitri~B Chklovskii,
+  and Eftychios~A Pnevmatikakis.
+\newblock {CaImAn} an open source tool for scalable calcium imaging data
+  analysis.
+\newblock \emph{Elife}, 8, January 2019.
+
+\bibitem[Harris et~al.(2016)Harris, Quiroga, Freeman, and Smith]{Harris2016-zo}
+Kenneth~D Harris, Rodrigo~Quian Quiroga, Jeremy Freeman, and Spencer~L Smith.
+\newblock Improving data quality in neuronal population recordings.
+\newblock \emph{Nat. Neurosci.}, 19\penalty0 (9):\penalty0 1165--1174, August
+  2016.
+
+\bibitem[Harvey et~al.(2012)Harvey, Coen, and Tank]{Harvey2012-bh}
+Christopher~D Harvey, Philip Coen, and David~W Tank.
+\newblock Choice-specific sequences in parietal cortex during a
+  virtual-navigation decision task.
+\newblock \emph{Nature}, 484\penalty0 (7392):\penalty0 62--68, April 2012.
+
+\bibitem[Hires et~al.(2015)Hires, Gutnisky, Yu, O'Connor, and
+  Svoboda]{Hires2015-by}
+Samuel~Andrew Hires, Diego~A Gutnisky, Jianing Yu, Daniel~H O'Connor, and Karel
+  Svoboda.
+\newblock Low-noise encoding of active touch by layer 4 in the somatosensory
+  cortex.
+\newblock \emph{Elife}, 4, August 2015.
+
+\bibitem[Huber et~al.(2012)Huber, Gutnisky, Peron, O'Connor, Wiegert, Tian,
+  Oertner, Looger, and Svoboda]{Huber2012-mi}
+Daniel Huber, D~A Gutnisky, S~Peron, D~H O'Connor, J~S Wiegert, L~Tian, T~G
+  Oertner, L~L Looger, and K~Svoboda.
+\newblock Multiple dynamic representations in the motor cortex during
+  sensorimotor learning.
+\newblock \emph{Nature}, 484\penalty0 (7395):\penalty0 473--478, April 2012.
+
+\bibitem[Jewell and Witten(2018)]{Jewell2018-cx}
+Sean Jewell and Daniela Witten.
+\newblock Exact spike train inference via $\ell_0$ optimization.
+\newblock \emph{Ann. Appl. Stat.}, 12\penalty0 (4):\penalty0 2457--2482,
+  December 2018.
+
+\bibitem[Kaifosh et~al.(2014)Kaifosh, Zaremba, Danielson, and
+  Losonczy]{Kaifosh2014-zo}
+Patrick Kaifosh, Jeffrey~D Zaremba, Nathan~B Danielson, and Attila Losonczy.
+\newblock {SIMA}: Python software for analysis of dynamic fluorescence imaging
+  data.
+\newblock \emph{Front. Neuroinform.}, 8:\penalty0 80, September 2014.
+
+\bibitem[Kato et~al.(2015)Kato, Kaplan, Schr{\"o}del, Skora, Lindsay, Yemini,
+  Lockery, and Zimmer]{Kato2015-sb}
+Saul Kato, Harris~S Kaplan, Tina Schr{\"o}del, Susanne Skora, Theodore~H
+  Lindsay, Eviatar Yemini, Shawn Lockery, and Manuel Zimmer.
+\newblock Global brain dynamics embed the motor command sequence of
+  caenorhabditis elegans.
+\newblock \emph{Cell}, 163\penalty0 (3):\penalty0 656--669, October 2015.
+
+\bibitem[Keemink et~al.(2018)Keemink, Lowe, Pakan, Dylda, van Rossum, and
+  Rochefort]{Keemink2018-li}
+Sander~W Keemink, Scott~C Lowe, Janelle M~P Pakan, Evelyn Dylda, Mark C~W van
+  Rossum, and Nathalie~L Rochefort.
+\newblock {FISSA}: A neuropil decontamination toolbox for calcium imaging
+  signals.
+\newblock \emph{Sci. Rep.}, 8\penalty0 (1):\penalty0 3493, February 2018.
+
+\bibitem[Klaus et~al.(2017)Klaus, Martins, Paixao, Zhou, Paninski, and
+  Costa]{Klaus2017-wn}
+Andreas Klaus, Gabriela~J Martins, Vitor~B Paixao, Pengcheng Zhou, Liam
+  Paninski, and Rui~M Costa.
+\newblock The spatiotemporal organization of the striatum encodes action space.
+\newblock \emph{Neuron}, 95\penalty0 (5):\penalty0 1171--1180.e7, August 2017.
+
+\bibitem[Kobak et~al.(2016)Kobak, Brendel, Constantinidis, Feierstein, Kepecs,
+  Mainen, Qi, Romo, Uchida, and Machens]{Kobak2016-xy}
+Dmitry Kobak, Wieland Brendel, Christos Constantinidis, Claudia~E Feierstein,
+  Adam Kepecs, Zachary~F Mainen, Xue-Lian Qi, Ranulfo Romo, Naoshige Uchida,
+  and Christian~K Machens.
+\newblock Demixed principal component analysis of neural population data.
+\newblock \emph{Elife}, 5, April 2016.
+
+\bibitem[L{\"u}tcke et~al.(2013)L{\"u}tcke, Gerhard, Zenke, Gerstner, and
+  Helmchen]{Lutcke2013-wu}
+Henry L{\"u}tcke, Felipe Gerhard, Friedemann Zenke, Wulfram Gerstner, and
+  Fritjof Helmchen.
+\newblock Inference of neuronal network spike dynamics and topology from
+  calcium imaging data.
+\newblock \emph{Front. Neural Circuits}, 7:\penalty0 201, December 2013.
+
+\bibitem[Mukamel et~al.(2009)Mukamel, Nimmerjahn, and
+  Schnitzer]{Mukamel2009-am}
+Eran~A Mukamel, Axel Nimmerjahn, and Mark~J Schnitzer.
+\newblock Automated analysis of cellular signals from large-scale calcium
+  imaging data.
+\newblock \emph{Neuron}, 63\penalty0 (6):\penalty0 747--760, September 2009.
+
+\bibitem[Munaf{\`o} and Davey~Smith(2018)]{Munafo2018-ab}
+Marcus~R Munaf{\`o} and George Davey~Smith.
+\newblock Robust research needs many lines of evidence.
+\newblock \emph{Nature}, 553\penalty0 (7689):\penalty0 399--401, January 2018.
+
+\bibitem[O'Connor et~al.(2010)O'Connor, Peron, Huber, and
+  Svoboda]{OConnor2010-hd}
+Daniel~H O'Connor, Simon~P Peron, Daniel Huber, and Karel Svoboda.
+\newblock Neural activity in barrel cortex underlying vibrissa-based object
+  localization in mice.
+\newblock \emph{Neuron}, 67\penalty0 (6):\penalty0 1048--1061, September 2010.
+
+\bibitem[Pachitariu et~al.(2016)Pachitariu, Stringer, Schr{\"o}der, Dipoppa,
+  Federico~Rossi, Carandini, and Harris]{Pachitariu2016-ui}
+Marius Pachitariu, Carsen Stringer, Sylvia Schr{\"o}der, Mario Dipoppa,
+  L~Federico~Rossi, Matteo Carandini, and Kenneth~D Harris.
+\newblock Suite2p: beyond 10, 000 neurons with standard two-photon microscopy.
+\newblock \emph{BioRxiv}, Preprint at http://dx.doi.org/10.1101/061507, 2016.
+
+\bibitem[Pachitariu et~al.(2018)Pachitariu, Stringer, and
+  Harris]{Pachitariu2018-cj}
+Marius Pachitariu, Carsen Stringer, and Kenneth~D Harris.
+\newblock Robustness of spike deconvolution for neuronal calcium imaging.
+\newblock \emph{J. Neurosci.}, August 2018.
+
+\bibitem[Paiva et~al.(2010)Paiva, Park, and Pr{\'\i}ncipe]{Paiva2010-qv}
+Ant{\'o}nio R~C Paiva, Il~Park, and Jos{\'e}~C Pr{\'\i}ncipe.
+\newblock A comparison of binless spike train measures.
+\newblock \emph{Neural Comput. Appl.}, 19\penalty0 (3):\penalty0 405--419,
+  April 2010.
+
+\bibitem[Peron et~al.(2015{\natexlab{a}})Peron, Chen, and
+  Svoboda]{Peron2015-qz}
+Simon Peron, Tsai-Wen Chen, and Karel Svoboda.
+\newblock Comprehensive imaging of cortical networks.
+\newblock \emph{Curr. Opin. Neurobiol.}, 32:\penalty0 115--123, June
+  2015{\natexlab{a}}.
+
+\bibitem[Peron et~al.(2015{\natexlab{b}})Peron, Freeman, Iyer, Guo, and
+  Svoboda]{Peron2015-kd}
+Simon~P Peron, Jeremy Freeman, Vijay Iyer, Caiying Guo, and Karel Svoboda.
+\newblock A cellular resolution map of barrel cortex activity during tactile
+  behavior.
+\newblock \emph{Neuron}, 86\penalty0 (3):\penalty0 783--799, May
+  2015{\natexlab{b}}.
+
+\bibitem[Pnevmatikakis et~al.(2016)Pnevmatikakis, Soudry, Gao, Machado, Merel,
+  Pfau, Reardon, Mu, Lacefield, Yang, Ahrens, Bruno, Jessell, Peterka, Yuste,
+  and Paninski]{Pnevmatikakis2016-tk}
+Eftychios~A Pnevmatikakis, Daniel Soudry, Yuanjun Gao, Timothy~A Machado, Josh
+  Merel, David Pfau, Thomas Reardon, Yu~Mu, Clay Lacefield, Weijian Yang, Misha
+  Ahrens, Randy Bruno, Thomas~M Jessell, Darcy~S Peterka, Rafael Yuste, and
+  Liam Paninski.
+\newblock Simultaneous denoising, deconvolution, and demixing of calcium
+  imaging data.
+\newblock \emph{Neuron}, January 2016.
+
+\bibitem[Portugues et~al.(2014)Portugues, Feierstein, Engert, and
+  Orger]{Portugues2014-kq}
+Ruben Portugues, Claudia~E Feierstein, Florian Engert, and Michael~B Orger.
+\newblock Whole-brain activity maps reveal stereotyped, distributed networks
+  for visuomotor behavior.
+\newblock \emph{Neuron}, 81\penalty0 (6):\penalty0 1328--1343, March 2014.
+
+\bibitem[Reynolds et~al.(2018)Reynolds, Abrahamsson, Sj{\"o}str{\"o}m, Schultz,
+  and Dragotti]{Reynolds2018-yh}
+Stephanie Reynolds, Therese Abrahamsson, Per~Jesper Sj{\"o}str{\"o}m, Simon~R
+  Schultz, and Pier~Luigi Dragotti.
+\newblock {CosMIC}: A consistent metric for spike inference from calcium
+  imaging.
+\newblock \emph{Neural Comput.}, 30\penalty0 (10):\penalty0 2726--2756, October
+  2018.
+
+\bibitem[Stringer and Pachitariu(2018)]{Stringer2018-st}
+Carsen Stringer and Marius Pachitariu.
+\newblock Computational processing of neural recordings from calcium imaging
+  data.
+\newblock \emph{Curr. Opin. Neurobiol.}, 55:\penalty0 22--31, December 2018.
+
+\bibitem[Stringer et~al.(2019)Stringer, Pachitariu, Steinmetz, Carandini, and
+  Harris]{Stringer2019-ze}
+Carsen Stringer, Marius Pachitariu, Nicholas Steinmetz, Matteo Carandini, and
+  Kenneth~D Harris.
+\newblock High-dimensional geometry of population responses in visual cortex.
+\newblock \emph{Nature}, June 2019.
+
+\bibitem[Svoboda(2015)]{Svoboda2015-ym}
+K~Svoboda.
+\newblock Simultaneous imaging and loose-seal cell-attached electrical
+  recordings from neurons expressing a variety of genetically encoded calcium
+  indicators.
+\newblock \emph{GENIE project, Janelia Farm Campus, HHMI; CRCNS.org}, 2015.
+
+\bibitem[Theis et~al.(2016)Theis, Berens, Froudarakis, Reimer,
+  Rom{\'a}n~Ros{\'o}n, Baden, Euler, Tolias, and Bethge]{Theis2016-ee}
+Lucas Theis, Philipp Berens, Emmanouil Froudarakis, Jacob Reimer, Miroslav
+  Rom{\'a}n~Ros{\'o}n, Tom Baden, Thomas Euler, Andreas~S Tolias, and Matthias
+  Bethge.
+\newblock Benchmarking spike rate inference in population calcium imaging.
+\newblock \emph{Neuron}, 90\penalty0 (3):\penalty0 471--482, May 2016.
+
+\bibitem[Victor and Purpura(1996)]{Victor1996-cg}
+J~D Victor and K~P Purpura.
+\newblock Nature and precision of temporal coding in visual cortex: a
+  metric-space analysis.
+\newblock \emph{J. Neurophysiol.}, 76\penalty0 (2):\penalty0 1310--1326, August
+  1996.
+
+\bibitem[Vogelstein et~al.(2010)Vogelstein, Packer, Machado, Sippy, Babadi,
+  Yuste, and Paninski]{Vogelstein2010-uc}
+Joshua~T Vogelstein, Adam~M Packer, Timothy~A Machado, Tanya Sippy, Baktash
+  Babadi, Rafael Yuste, and Liam Paninski.
+\newblock Fast nonnegative deconvolution for spike train inference from
+  population calcium imaging.
+\newblock \emph{J. Neurophysiol.}, 104\penalty0 (6):\penalty0 3691--3704,
+  December 2010.
+
+\bibitem[Wohrer et~al.(2013)Wohrer, Humphries, and Machens]{Wohrer2013-rp}
+Adrien Wohrer, Mark~D Humphries, and Christian~K Machens.
+\newblock Population-wide distributions of neural activity during perceptual
+  decision-making.
+\newblock \emph{Prog. Neurobiol.}, 103:\penalty0 156--193, April 2013.
+
+\bibitem[Yaksi and Friedrich(2006)]{Yaksi2006-ic}
+Emre Yaksi and Rainer~W Friedrich.
+\newblock Reconstruction of firing rate changes across neuronal populations by
+  temporally deconvolved ca2+ imaging.
+\newblock \emph{Nat. Methods}, 3\penalty0 (5):\penalty0 377--383, May 2006.
+
+\end{thebibliography}

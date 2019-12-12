@@ -1,0 +1,20 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Results}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Performance of deconvolution algorithms on ground-truth data-sets}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Parameters optimised on ground-truth are widely distributed and sensitive}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Deconvolution of population imaging in barrel cortex during a decision task}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Deconvolution methods disagree on estimates of simple neural statistics}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.5}{Inferences of single cell tuning differ widely between raw calcium and deconvolved methods}{section.2}% 7
+\BOOKMARK [2][-]{subsection.2.6}{Inconsistent recovery of population correlation structure across deconvolution approaches}{section.2}% 8
+\BOOKMARK [2][-]{subsection.2.7}{Deconvolution methods show the same population activity is both low and high dimensional}{section.2}% 9
+\BOOKMARK [1][-]{section.3}{Discussion}{}% 10
+\BOOKMARK [2][-]{subsection.3.1}{Accurate discrete deconvolution is possible, but sensitive}{section.3}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Choosing parameters for deconvolution methods}{section.3}% 12
+\BOOKMARK [2][-]{subsection.3.3}{Ways forward}{section.3}% 13
+\BOOKMARK [1][-]{section.4}{Methods}{}% 14
+\BOOKMARK [2][-]{subsection.4.1}{Event rate estimation}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.2}{Task-tuned cells}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.3}{Touch-related responses}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.4}{Pairwise correlations}{section.4}% 18
+\BOOKMARK [2][-]{subsection.4.5}{Correlations between correlation matrices}{section.4}% 19
+\BOOKMARK [2][-]{subsection.4.6}{Dimensionality}{section.4}% 20
